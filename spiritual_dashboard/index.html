@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Orbit ZeroLight Dashboard - Spiritual Monitoring</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card .label {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        .assets-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .section-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .assets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .asset-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .asset-card.active {
+            border-color: #4CAF50;
+            background: #f8fff8;
+        }
+        
+        .asset-card.inactive {
+            border-color: #f44336;
+            background: #fff8f8;
+        }
+        
+        .asset-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .spiritual-name {
+            color: #667eea;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .asset-details {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-active {
+            background: #4CAF50;
+        }
+        
+        .status-inactive {
+            background: #f44336;
+        }
+        
+        .reflection-section {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            color: #2d3436;
+        }
+        
+        .reflection-text {
+            white-space: pre-line;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            opacity: 0.8;
+        }
+        
+        .refresh-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .refresh-btn:hover {
+            background: #5a67d8;
+            transform: scale(1.05);
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌟 Orbit ZeroLight Dashboard</h1>
+            <p>Spiritual Web Monitoring System - Ladang Berkah Digital</p>
+            <p>Last Updated: 2025-09-27 21:34:43</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="icon">🌍</div>
+                <div class="number">3</div>
+                <div class="label">Planet Earth</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🌊</div>
+                <div class="number">21</div>
+                <div class="label">Wilayah Sea</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">⚡</div>
+                <div class="number">24</div>
+                <div class="label">Aset Aktif</div>
+            </div>
+            <div class="stat-card">
+                <div class="icon">🔒</div>
+                <div class="number">92</div>
+                <div class="label">SSL Protected</div>
+            </div>
+        </div>
+        
+        <div class="assets-section">
+            <h2 class="section-title">🎯 Status Aset Spiritual</h2>
+            <div class="assets-grid">
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        google.com
+                    </div>
+                    <div class="spiritual-name">planet1.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> planet<br>
+                        <strong>IP:</strong> 216.239.38.120<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        github.com
+                    </div>
+                    <div class="spiritual-name">planet2.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> planet<br>
+                        <strong>IP:</strong> 20.205.243.166<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        stackoverflow.com
+                    </div>
+                    <div class="spiritual-name">planet3.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> planet<br>
+                        <strong>IP:</strong> 172.64.155.249<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        www.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah1.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 216.239.38.120<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        mail.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah2.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 172.217.194.18<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        blog.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah3.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 142.251.10.191<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        shop.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah4.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 172.253.118.92<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        images.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah5.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 74.125.130.100<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        docs.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah6.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 142.250.4.139<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        support.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah7.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 142.251.10.138<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        help.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah8.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 142.250.4.102<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        news.google.com
+                    </div>
+                    <div class="spiritual-name">wilayah9.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 74.125.130.102<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        www.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah10.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 20.205.243.166<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        blog.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah11.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 185.199.108.153<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        shop.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah12.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 20.205.243.166<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        api.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah13.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 20.205.243.168<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        admin.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah14.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 140.82.114.24<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        docs.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah15.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 185.199.108.154<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        support.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah16.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 185.199.109.133<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        help.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah17.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 140.82.114.18<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        community.github.com
+                    </div>
+                    <div class="spiritual-name">wilayah18.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 140.82.114.18<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        www.stackoverflow.com
+                    </div>
+                    <div class="spiritual-name">wilayah19.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 104.18.32.7<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+                <div class="asset-card inactive">
+                    <div class="asset-name">
+                        <span class="status-indicator status-inactive"></span>
+                        mail.stackoverflow.com
+                    </div>
+                    <div class="spiritual-name">wilayah20.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 64.233.170.121<br>
+                        <strong>SSL:</strong> 🔓 Invalid<br>
+                        <strong>Status:</strong> 🔴 Offline
+                    </div>
+                </div>
+                <div class="asset-card active">
+                    <div class="asset-name">
+                        <span class="status-indicator status-active"></span>
+                        blog.stackoverflow.com
+                    </div>
+                    <div class="spiritual-name">wilayah21.sea.earth.orbit.system</div>
+                    <div class="asset-details">
+                        <strong>Category:</strong> wilayah<br>
+                        <strong>IP:</strong> 104.18.32.7<br>
+                        <strong>SSL:</strong> 🔒 Valid<br>
+                        <strong>Status:</strong> 🟢 Online
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="reflection-section">
+            <h2 class="section-title">🙏 Refleksi Harian Terbaru</h2>
+            <div class="reflection-text">🌟 REFLEKSI HARIAN ORBIT ZEROLIGHT SYSTEM
+Tanggal: 2025-09-27
+
+🌍 Planet & Wilayah:
+- Total Aset Spiritual: 24
+- Aset Aktif: 24
+- Tingkat Keberhasilan: 95.8%
+
+🔒 Keamanan:
+- SSL Terlindungi: 92
+- Total Transaksi: 96
+
+🙏 Syukur & Refleksi:
+Alhamdulillahi rabbil alamiin atas berkah yang diberikan.
+Sistem spiritual berjalan dengan lancar dan memberikan manfaat.
+Semoga teknologi ini selalu membawa kebaikan untuk umat.
+
+✨ Barakallahu fiikum</div>
+        </div>
+        <div class="footer">
+            <p>🌟 Barakallahu fiikum - Semoga berkah dan bermanfaat</p>
+            <p>Orbit ZeroLight System - Ladang Berkah Digital</p>
+        </div>
+    </div>
+    
+    <button class="refresh-btn pulse" onclick="location.reload()">
+        🔄 Refresh
+    </button>
+    
+    <script>
+        // Auto refresh setiap 30 detik
+        setTimeout(() => {
+            location.reload();
+        }, 30000);
+        
+        // Animasi untuk kartu aset
+        document.querySelectorAll('.asset-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

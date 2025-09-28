@@ -1,0 +1,285 @@
+name: zerolight_orbit_mobile
+description: 🙏 ZeroLight Orbit - Blessed Cross-Platform Mobile Experience with Divine Flutter
+# بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم - In The Name of GOD
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 🎨 UI & Design - Spiritual Visual Experience
+  cupertino_icons: ^1.0.6
+  material_design_icons_flutter: ^7.0.7296
+  flutter_svg: ^2.0.9
+  cached_network_image: ^3.3.0
+  flutter_staggered_grid_view: ^0.7.0
+  flutter_staggered_animations: ^1.1.1
+  
+  # 🌟 Animations & Visual Effects - Divine Motion
+  flutter_animate: ^4.3.0
+  lottie: ^2.7.0
+  rive: ^0.12.4
+  animated_text_kit: ^4.2.2
+  shimmer: ^3.0.0
+  flutter_spinkit: ^5.2.0
+  
+  # 🔄 State Management - Spiritual Data Flow
+  provider: ^6.1.1
+  riverpod: ^2.4.9
+  flutter_riverpod: ^2.4.9
+  bloc: ^8.1.2
+  flutter_bloc: ^8.1.3
+  get: ^4.6.6
+  
+  # 🌐 Networking & API - Sacred Communication
+  http: ^1.1.2
+  dio: ^5.4.0
+  retrofit: ^4.0.3
+  json_annotation: ^4.8.1
+  web_socket_channel: ^2.4.0
+  socket_io_client: ^2.0.3+1
+  
+  # 💾 Storage & Database - Divine Data Persistence
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  sqflite: ^2.3.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+  
+  # 🔐 Security & Authentication - Sacred Protection
+  local_auth: ^2.1.7
+  crypto: ^3.0.3
+  encrypt: ^5.0.1
+  pointycastle: ^3.7.3
+  jwt_decoder: ^2.0.1
+  
+  # 📱 Device & Platform - Blessed Hardware Integration
+  device_info_plus: ^9.1.1
+  package_info_plus: ^4.2.0
+  connectivity_plus: ^5.0.2
+  network_info_plus: ^4.1.0
+  battery_plus: ^4.0.2
+  
+  # 🔔 Notifications - Divine Messages
+  flutter_local_notifications: ^16.3.0
+  firebase_messaging: ^14.7.6
+  awesome_notifications: ^0.8.2
+  
+  # 📍 Location & Maps - Sacred Geography
+  geolocator: ^10.1.0
+  geocoding: ^2.1.1
+  google_maps_flutter: ^2.5.0
+  location: ^5.0.3
+  
+  # 📷 Media & Files - Blessed Content
+  camera: ^0.10.5+5
+  image_picker: ^1.0.4
+  file_picker: ^6.1.1
+  image: ^4.1.3
+  video_player: ^2.8.1
+  audio_waveforms: ^1.0.5
+  
+  # 🌍 Internationalization - Global Spiritual Reach
+  intl: ^0.18.1
+  flutter_localizations:
+    sdk: flutter
+  
+  # 🎯 Analytics & Monitoring - Divine Insights
+  firebase_analytics: ^10.7.4
+  firebase_crashlytics: ^3.4.8
+  sentry_flutter: ^7.13.2
+  
+  # 🔧 Utilities - Sacred Tools
+  url_launcher: ^6.2.2
+  share_plus: ^7.2.1
+  permission_handler: ^11.1.0
+  app_settings: ^5.1.1
+  flutter_email_sender: ^6.0.2
+  
+  # 📊 Charts & Graphs - Visual Spiritual Data
+  fl_chart: ^0.65.0
+  syncfusion_flutter_charts: ^23.2.7
+  charts_flutter: ^0.12.0
+  
+  # 🎵 Audio & Sound - Divine Harmony
+  audioplayers: ^5.2.1
+  just_audio: ^0.9.36
+  flutter_tts: ^3.8.5
+  speech_to_text: ^6.6.0
+  
+  # 🔍 Search & Filter - Sacred Discovery
+  flutter_typeahead: ^4.8.0
+  searchable_listview: ^2.12.0
+  
+  # 📝 Forms & Input - Blessed User Interaction
+  flutter_form_builder: ^9.1.1
+  form_builder_validators: ^9.1.0
+  
+  # 🎨 Theming & Styling - Divine Aesthetics
+  flex_color_scheme: ^7.3.1
+  dynamic_color: ^1.6.8
+  
+  # 🔄 Background Tasks - Continuous Blessing
+  workmanager: ^0.5.2
+  flutter_background_service: ^5.0.5
+  
+  # 📱 Platform Specific - Native Spiritual Integration
+  flutter_native_splash: ^2.3.6
+  flutter_launcher_icons: ^0.13.1
+  
+  # 🌟 Firebase Integration - Cloud Blessing
+  firebase_core: ^2.24.2
+  firebase_auth: ^4.15.3
+  cloud_firestore: ^4.13.6
+  firebase_storage: ^11.5.6
+  firebase_remote_config: ^4.3.8
+  
+  # 🔗 Deep Linking - Sacred Navigation
+  go_router: ^12.1.3
+  app_links: ^3.5.0
+  
+  # 🎪 Testing & Quality - Divine Assurance
+  mockito: ^5.4.4
+  integration_test:
+    sdk: flutter
+  
+  # 🌈 Additional Spiritual Enhancements
+  flutter_colorpicker: ^1.0.3
+  qr_flutter: ^4.1.0
+  barcode_scan2: ^4.3.3
+  webview_flutter: ^4.4.2
+  in_app_purchase: ^3.1.11
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # 🔧 Development Tools - Sacred Development Environment
+  flutter_lints: ^3.0.1
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
+  retrofit_generator: ^8.0.4
+  hive_generator: ^2.0.1
+  
+  # 🎨 Asset Generation - Divine Resources
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.6
+  
+  # 📊 Code Quality - Spiritual Excellence
+  very_good_analysis: ^5.1.0
+  dart_code_metrics: ^5.7.6
+  
+  # 🧪 Testing Framework - Divine Verification
+  mocktail: ^1.0.2
+  bloc_test: ^9.1.5
+  golden_toolkit: ^0.15.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/animations/
+    - assets/sounds/
+    - assets/fonts/
+    - assets/config/
+    - assets/spiritual/
+    - assets/blessings/
+
+  # An image asset can refer to one or more resolution-variant files:
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset path and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: SpiritualFont
+      fonts:
+        - asset: assets/fonts/spiritual_regular.ttf
+        - asset: assets/fonts/spiritual_bold.ttf
+          weight: 700
+        - asset: assets/fonts/spiritual_light.ttf
+          weight: 300
+    
+    - family: DivineIcons
+      fonts:
+        - asset: assets/fonts/divine_icons.ttf
+
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
+# 🙏 Flutter Configuration - Blessed Mobile Development
+# Platform-specific configurations for divine mobile experience
+
+flutter_native_splash:
+  color: "#1E3A8A"
+  image: assets/images/splash_logo.png
+  color_dark: "#0F172A"
+  image_dark: assets/images/splash_logo_dark.png
+  android_12:
+    image: assets/images/splash_logo_android12.png
+    icon_background_color: "#FFD700"
+    image_dark: assets/images/splash_logo_android12_dark.png
+    icon_background_color_dark: "#FBBF24"
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+  web:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+    background_color: "#1E3A8A"
+    theme_color: "#FFD700"
+  windows:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+    icon_size: 48
+  macos:
+    generate: true
+    image_path: "assets/icons/app_icon.png"
+
+# 🌟 Spiritual Mobile Configuration
+# May this configuration serve the divine purpose with blessing
+# بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم - In The Name of GOD

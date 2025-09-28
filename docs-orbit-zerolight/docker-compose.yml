@@ -1,0 +1,316 @@
+# 🙏 In The Name of GOD - ZeroLight Orbit Docker Compose
+# Blessed Microservices Architecture for Scalable Spiritual System
+# بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+
+version: '3.8'
+
+networks:
+  spiritual-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  spiritual-db-data:
+    driver: local
+  spiritual-redis-data:
+    driver: local
+  spiritual-logs:
+    driver: local
+  spiritual-assets:
+    driver: local
+
+services:
+  # 🌟 API Gateway - Spiritual Entry Point
+  api-gateway:
+    build:
+      context: ./services/api-gateway
+      dockerfile: Dockerfile
+    container_name: zerolight-api-gateway
+    ports:
+      - "8080:8080"
+      - "8443:8443"  # HTTPS
+    environment:
+      - NODE_ENV=production
+      - SPIRITUAL_MODE=blessed
+      - JWT_SECRET=${JWT_SECRET}
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.api-gateway.rule=Host(`api.zerolight.orbit`)"
+
+  # 🤖 Intake Bot Service - AI Content Reception
+  intake-bot-service:
+    build:
+      context: ./services/intake-bot
+      dockerfile: Dockerfile
+    container_name: zerolight-intake-bot
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_AI_MODEL=gpt-4-spiritual
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+    deploy:
+      replicas: 3
+      resources:
+        limits:
+          memory: 2G
+          cpus: '1.0'
+
+  # ⚖️ Spiritual Legal Sorter Service
+  legal-sorter-service:
+    build:
+      context: ./services/legal-sorter
+      dockerfile: Dockerfile
+    container_name: zerolight-legal-sorter
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_LEGAL_DB=${SPIRITUAL_LEGAL_DB}
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+
+  # ✨ Crop Purification Service
+  crop-purification-service:
+    build:
+      context: ./services/crop-purification
+      dockerfile: Dockerfile
+    container_name: zerolight-crop-purification
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_PURIFICATION_LEVEL=divine
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+
+  # 📦 Packing Shelter Service
+  packing-shelter-service:
+    build:
+      context: ./services/packing-shelter
+      dockerfile: Dockerfile
+    container_name: zerolight-packing-shelter
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_PACKAGING=blessed
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+
+  # 🎁 Reward Viewer Service
+  reward-viewer-service:
+    build:
+      context: ./services/reward-viewer
+      dockerfile: Dockerfile
+    container_name: zerolight-reward-viewer
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_REWARDS=divine_justice
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+
+  # 🔍 Spiritual Audit Service
+  audit-service:
+    build:
+      context: ./services/audit
+      dockerfile: Dockerfile
+    container_name: zerolight-audit
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_AUDIT_LEVEL=comprehensive
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+
+  # 🛡️ Guard E2E Service
+  guard-e2e-service:
+    build:
+      context: ./services/guard-e2e
+      dockerfile: Dockerfile
+    container_name: zerolight-guard-e2e
+    environment:
+      - PYTHON_ENV=production
+      - SPIRITUAL_SECURITY=maximum
+      - REDIS_URL=redis://spiritual-redis:6379
+      - DATABASE_URL=postgresql://spiritual:blessed@spiritual-db:5432/zerolight_orbit
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-db
+      - spiritual-redis
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+
+  # 🗄️ Spiritual Database - PostgreSQL with Divine Optimization
+  spiritual-db:
+    image: postgres:15-alpine
+    container_name: zerolight-spiritual-db
+    environment:
+      - POSTGRES_DB=zerolight_orbit
+      - POSTGRES_USER=spiritual
+      - POSTGRES_PASSWORD=blessed
+      - POSTGRES_INITDB_ARGS=--encoding=UTF-8 --lc-collate=C --lc-ctype=C
+    volumes:
+      - spiritual-db-data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - spiritual-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U spiritual -d zerolight_orbit"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  # 🚀 Spiritual Redis - High-Performance Caching
+  spiritual-redis:
+    image: redis:7-alpine
+    container_name: zerolight-spiritual-redis
+    command: redis-server --appendonly yes --requirepass blessed
+    volumes:
+      - spiritual-redis-data:/data
+    networks:
+      - spiritual-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "--raw", "incr", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # 📊 Spiritual Monitoring - Prometheus
+  spiritual-prometheus:
+    image: prom/prometheus:latest
+    container_name: zerolight-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - spiritual-network
+    restart: unless-stopped
+
+  # 📈 Spiritual Grafana - Divine Dashboards
+  spiritual-grafana:
+    image: grafana/grafana:latest
+    container_name: zerolight-grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=blessed
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    volumes:
+      - ./monitoring/grafana:/var/lib/grafana
+    networks:
+      - spiritual-network
+    restart: unless-stopped
+
+  # 🌐 Spiritual Nginx - Load Balancer & Reverse Proxy
+  spiritual-nginx:
+    image: nginx:alpine
+    container_name: zerolight-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+      - spiritual-logs:/var/log/nginx
+    networks:
+      - spiritual-network
+    depends_on:
+      - api-gateway
+    restart: unless-stopped
+
+  # 🔄 Spiritual Message Queue - RabbitMQ
+  spiritual-rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: zerolight-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      - RABBITMQ_DEFAULT_USER=spiritual
+      - RABBITMQ_DEFAULT_PASS=blessed
+    volumes:
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+    networks:
+      - spiritual-network
+    restart: unless-stopped
+
+  # 🔍 Spiritual Elasticsearch - Divine Search Engine
+  spiritual-elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    container_name: zerolight-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ports:
+      - "9200:9200"
+    networks:
+      - spiritual-network
+    restart: unless-stopped
+
+  # 📝 Spiritual Kibana - Divine Analytics
+  spiritual-kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    container_name: zerolight-kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://spiritual-elasticsearch:9200
+    networks:
+      - spiritual-network
+    depends_on:
+      - spiritual-elasticsearch
+    restart: unless-stopped
+
+# 🙏 Blessed Configuration - May this architecture serve humanity with divine wisdom
+# Alhamdulillahi rabbil alameen - All praise to Allah, Lord of the worlds

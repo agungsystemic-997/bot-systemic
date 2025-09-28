@@ -1,0 +1,627 @@
+# 🙏 Allah'ın Adıyla - ZeroLight Orbit Turkish Translations
+# Turkish (tr) - Türkçe
+# بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+
+msgid ""
+msgstr ""
+"Project-Id-Version: ZeroLight Orbit 1.0\n"
+"Report-Msgid-Bugs-To: support@zerolight-orbit.com\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: ZeroLight Orbit Team\n"
+"Language-Team: Turkish\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Application Name and Branding
+msgid "app_name"
+msgstr "ZeroLight Orbit"
+
+msgid "app_tagline"
+msgstr "Kutsal Dijital Dönüşüm Platformu"
+
+msgid "app_blessing"
+msgstr "Allah'ın Adıyla - Mübarek Dijital Deneyim"
+
+msgid "app_description"
+msgstr "Dijital dönüşüm için kapsamlı manevi teknoloji platformu"
+
+# Navigation and Menu Items
+msgid "nav_home"
+msgstr "Ana Sayfa"
+
+msgid "nav_dashboard"
+msgstr "Kontrol Paneli"
+
+msgid "nav_analytics"
+msgstr "Analitik"
+
+msgid "nav_security"
+msgstr "Güvenlik"
+
+msgid "nav_settings"
+msgstr "Ayarlar"
+
+msgid "nav_profile"
+msgstr "Profil"
+
+msgid "nav_help"
+msgstr "Yardım"
+
+msgid "nav_about"
+msgstr "Hakkında"
+
+msgid "nav_logout"
+msgstr "Çıkış Yap"
+
+# Authentication
+msgid "auth_login"
+msgstr "Giriş Yap"
+
+msgid "auth_register"
+msgstr "Kayıt Ol"
+
+msgid "auth_username"
+msgstr "Kullanıcı Adı"
+
+msgid "auth_email"
+msgstr "E-posta"
+
+msgid "auth_password"
+msgstr "Şifre"
+
+msgid "auth_confirm_password"
+msgstr "Şifreyi Onayla"
+
+msgid "auth_forgot_password"
+msgstr "Şifremi Unuttum?"
+
+msgid "auth_remember_me"
+msgstr "Beni Hatırla"
+
+msgid "auth_login_success"
+msgstr "Giriş başarılı! ZeroLight Orbit'e hoş geldiniz"
+
+msgid "auth_login_failed"
+msgstr "Giriş başarısız. Lütfen bilgilerinizi kontrol edin"
+
+msgid "auth_register_success"
+msgstr "Kayıt başarılı! Mübarek platformumuza hoş geldiniz"
+
+msgid "auth_logout_success"
+msgstr "Çıkış başarılı. Selametle kalın"
+
+# Dashboard
+msgid "dashboard_welcome"
+msgstr "ZeroLight Orbit Kontrol Paneline Hoş Geldiniz"
+
+msgid "dashboard_overview"
+msgstr "Sistem Genel Bakış"
+
+msgid "dashboard_metrics"
+msgstr "Anahtar Metrikler"
+
+msgid "dashboard_recent_activity"
+msgstr "Son Aktiviteler"
+
+msgid "dashboard_quick_actions"
+msgstr "Hızlı İşlemler"
+
+msgid "dashboard_system_health"
+msgstr "Sistem Sağlığı"
+
+msgid "dashboard_performance"
+msgstr "Performans"
+
+msgid "dashboard_security_status"
+msgstr "Güvenlik Durumu"
+
+# Analytics
+msgid "analytics_title"
+msgstr "Analitik ve İçgörüler"
+
+msgid "analytics_user_engagement"
+msgstr "Kullanıcı Etkileşimi"
+
+msgid "analytics_system_performance"
+msgstr "Sistem Performansı"
+
+msgid "analytics_security_metrics"
+msgstr "Güvenlik Metrikleri"
+
+msgid "analytics_spiritual_insights"
+msgstr "Manevi İçgörüler"
+
+msgid "analytics_export_data"
+msgstr "Veri Dışa Aktar"
+
+msgid "analytics_generate_report"
+msgstr "Rapor Oluştur"
+
+# Security
+msgid "security_title"
+msgstr "Güvenlik Merkezi"
+
+msgid "security_scan"
+msgstr "Güvenlik Taraması"
+
+msgid "security_threats"
+msgstr "Tehdit Tespiti"
+
+msgid "security_encryption"
+msgstr "Şifreleme Durumu"
+
+msgid "security_backup"
+msgstr "Yedekleme ve Kurtarma"
+
+msgid "security_audit_log"
+msgstr "Denetim Günlüğü"
+
+msgid "security_change_password"
+msgstr "Şifre Değiştir"
+
+msgid "security_two_factor"
+msgstr "İki Faktörlü Kimlik Doğrulama"
+
+msgid "security_scan_complete"
+msgstr "Güvenlik taraması başarıyla tamamlandı"
+
+msgid "security_no_threats"
+msgstr "Güvenlik tehdidi tespit edilmedi"
+
+# Settings
+msgid "settings_title"
+msgstr "Ayarlar"
+
+msgid "settings_general"
+msgstr "Genel Ayarlar"
+
+msgid "settings_appearance"
+msgstr "Görünüm"
+
+msgid "settings_language"
+msgstr "Dil"
+
+msgid "settings_notifications"
+msgstr "Bildirimler"
+
+msgid "settings_privacy"
+msgstr "Gizlilik"
+
+msgid "settings_advanced"
+msgstr "Gelişmiş Ayarlar"
+
+msgid "settings_save"
+msgstr "Ayarları Kaydet"
+
+msgid "settings_reset"
+msgstr "Varsayılana Sıfırla"
+
+msgid "settings_saved"
+msgstr "Ayarlar başarıyla kaydedildi"
+
+# Profile
+msgid "profile_title"
+msgstr "Kullanıcı Profili"
+
+msgid "profile_personal_info"
+msgstr "Kişisel Bilgiler"
+
+msgid "profile_spiritual_preferences"
+msgstr "Manevi Tercihler"
+
+msgid "profile_cultural_settings"
+msgstr "Kültürel Ayarlar"
+
+msgid "profile_timezone"
+msgstr "Saat Dilimi"
+
+msgid "profile_calendar"
+msgstr "Takvim Türü"
+
+msgid "profile_prayer_times"
+msgstr "Namaz Vakitleri"
+
+msgid "profile_update"
+msgstr "Profili Güncelle"
+
+msgid "profile_updated"
+msgstr "Profil başarıyla güncellendi"
+
+# Spiritual Elements
+msgid "spiritual_blessing"
+msgstr "İlahi Bereket"
+
+msgid "spiritual_prayer_time"
+msgstr "Namaz Vakti"
+
+msgid "spiritual_islamic_calendar"
+msgstr "İslami Takvim"
+
+msgid "spiritual_hijri_date"
+msgstr "Hicri Tarih"
+
+msgid "spiritual_lunar_calendar"
+msgstr "Ay Takvimi"
+
+msgid "spiritual_meditation"
+msgstr "Meditasyon"
+
+msgid "spiritual_reflection"
+msgstr "Manevi Düşünce"
+
+msgid "spiritual_guidance"
+msgstr "İlahi Rehberlik"
+
+# Prayer Times
+msgid "prayer_fajr"
+msgstr "İmsak"
+
+msgid "prayer_dhuhr"
+msgstr "Öğle"
+
+msgid "prayer_asr"
+msgstr "İkindi"
+
+msgid "prayer_maghrib"
+msgstr "Akşam"
+
+msgid "prayer_isha"
+msgstr "Yatsı"
+
+msgid "prayer_sunrise"
+msgstr "Güneş Doğuşu"
+
+msgid "prayer_sunset"
+msgstr "Güneş Batışı"
+
+# Islamic Months
+msgid "month_muharram"
+msgstr "Muharrem"
+
+msgid "month_safar"
+msgstr "Safer"
+
+msgid "month_rabi_awwal"
+msgstr "Rebiülevvel"
+
+msgid "month_rabi_thani"
+msgstr "Rebiülahir"
+
+msgid "month_jumada_awwal"
+msgstr "Cemaziyelevvel"
+
+msgid "month_jumada_thani"
+msgstr "Cemaziyelahir"
+
+msgid "month_rajab"
+msgstr "Recep"
+
+msgid "month_shaban"
+msgstr "Şaban"
+
+msgid "month_ramadan"
+msgstr "Ramazan"
+
+msgid "month_shawwal"
+msgstr "Şevval"
+
+msgid "month_dhul_qadah"
+msgstr "Zilkade"
+
+msgid "month_dhul_hijjah"
+msgstr "Zilhicce"
+
+# Common Actions
+msgid "action_save"
+msgstr "Kaydet"
+
+msgid "action_cancel"
+msgstr "İptal"
+
+msgid "action_delete"
+msgstr "Sil"
+
+msgid "action_edit"
+msgstr "Düzenle"
+
+msgid "action_view"
+msgstr "Görüntüle"
+
+msgid "action_download"
+msgstr "İndir"
+
+msgid "action_upload"
+msgstr "Yükle"
+
+msgid "action_search"
+msgstr "Ara"
+
+msgid "action_filter"
+msgstr "Filtrele"
+
+msgid "action_sort"
+msgstr "Sırala"
+
+msgid "action_refresh"
+msgstr "Yenile"
+
+msgid "action_close"
+msgstr "Kapat"
+
+msgid "action_minimize"
+msgstr "Küçült"
+
+msgid "action_maximize"
+msgstr "Büyüt"
+
+# Status Messages
+msgid "status_loading"
+msgstr "Yükleniyor..."
+
+msgid "status_saving"
+msgstr "Kaydediliyor..."
+
+msgid "status_success"
+msgstr "Başarılı"
+
+msgid "status_error"
+msgstr "Hata"
+
+msgid "status_warning"
+msgstr "Uyarı"
+
+msgid "status_info"
+msgstr "Bilgi"
+
+msgid "status_connecting"
+msgstr "Bağlanıyor..."
+
+msgid "status_connected"
+msgstr "Bağlandı"
+
+msgid "status_disconnected"
+msgstr "Bağlantı Kesildi"
+
+msgid "status_online"
+msgstr "Çevrimiçi"
+
+msgid "status_offline"
+msgstr "Çevrimdışı"
+
+# Error Messages
+msgid "error_network"
+msgstr "Ağ bağlantı hatası"
+
+msgid "error_server"
+msgstr "Sunucu hatası oluştu"
+
+msgid "error_validation"
+msgstr "Doğrulama hatası"
+
+msgid "error_permission"
+msgstr "İzin reddedildi"
+
+msgid "error_not_found"
+msgstr "Kaynak bulunamadı"
+
+msgid "error_timeout"
+msgstr "İstek zaman aşımı"
+
+msgid "error_unknown"
+msgstr "Bilinmeyen hata oluştu"
+
+# Success Messages
+msgid "success_saved"
+msgstr "Veri başarıyla kaydedildi"
+
+msgid "success_deleted"
+msgstr "Öğe başarıyla silindi"
+
+msgid "success_updated"
+msgstr "Bilgi başarıyla güncellendi"
+
+msgid "success_uploaded"
+msgstr "Dosya başarıyla yüklendi"
+
+msgid "success_downloaded"
+msgstr "Dosya başarıyla indirildi"
+
+# Confirmation Messages
+msgid "confirm_delete"
+msgstr "Bu öğeyi silmek istediğinizden emin misiniz?"
+
+msgid "confirm_logout"
+msgstr "Çıkış yapmak istediğinizden emin misiniz?"
+
+msgid "confirm_reset"
+msgstr "Ayarları sıfırlamak istediğinizden emin misiniz?"
+
+msgid "confirm_save"
+msgstr "Değişikliklerinizi kaydetmek istiyor musunuz?"
+
+# Time and Date
+msgid "time_now"
+msgstr "Şimdi"
+
+msgid "time_today"
+msgstr "Bugün"
+
+msgid "time_yesterday"
+msgstr "Dün"
+
+msgid "time_tomorrow"
+msgstr "Yarın"
+
+msgid "time_this_week"
+msgstr "Bu Hafta"
+
+msgid "time_last_week"
+msgstr "Geçen Hafta"
+
+msgid "time_this_month"
+msgstr "Bu Ay"
+
+msgid "time_last_month"
+msgstr "Geçen Ay"
+
+# Days of Week
+msgid "day_sunday"
+msgstr "Pazar"
+
+msgid "day_monday"
+msgstr "Pazartesi"
+
+msgid "day_tuesday"
+msgstr "Salı"
+
+msgid "day_wednesday"
+msgstr "Çarşamba"
+
+msgid "day_thursday"
+msgstr "Perşembe"
+
+msgid "day_friday"
+msgstr "Cuma"
+
+msgid "day_saturday"
+msgstr "Cumartesi"
+
+# Months
+msgid "month_january"
+msgstr "Ocak"
+
+msgid "month_february"
+msgstr "Şubat"
+
+msgid "month_march"
+msgstr "Mart"
+
+msgid "month_april"
+msgstr "Nisan"
+
+msgid "month_may"
+msgstr "Mayıs"
+
+msgid "month_june"
+msgstr "Haziran"
+
+msgid "month_july"
+msgstr "Temmuz"
+
+msgid "month_august"
+msgstr "Ağustos"
+
+msgid "month_september"
+msgstr "Eylül"
+
+msgid "month_october"
+msgstr "Ekim"
+
+msgid "month_november"
+msgstr "Kasım"
+
+msgid "month_december"
+msgstr "Aralık"
+
+# Numbers
+msgid "number_zero"
+msgstr "Sıfır"
+
+msgid "number_one"
+msgstr "Bir"
+
+msgid "number_two"
+msgstr "İki"
+
+msgid "number_three"
+msgstr "Üç"
+
+msgid "number_four"
+msgstr "Dört"
+
+msgid "number_five"
+msgstr "Beş"
+
+msgid "number_six"
+msgstr "Altı"
+
+msgid "number_seven"
+msgstr "Yedi"
+
+msgid "number_eight"
+msgstr "Sekiz"
+
+msgid "number_nine"
+msgstr "Dokuz"
+
+msgid "number_ten"
+msgstr "On"
+
+# Spiritual Blessings
+msgid "blessing_bismillah"
+msgstr "Bismillah"
+
+msgid "blessing_alhamdulillah"
+msgstr "Elhamdülillah"
+
+msgid "blessing_subhanallah"
+msgstr "Sübhanallah"
+
+msgid "blessing_allahu_akbar"
+msgstr "Allahu Ekber"
+
+msgid "blessing_la_ilaha_illa_allah"
+msgstr "La ilahe illallah"
+
+msgid "blessing_astaghfirullah"
+msgstr "Estağfirullah"
+
+msgid "blessing_inshallah"
+msgstr "İnşallah"
+
+msgid "blessing_mashallah"
+msgstr "Maşallah"
+
+msgid "blessing_barakallahu_feek"
+msgstr "Barakallahu feek"
+
+msgid "blessing_assalamu_alaikum"
+msgstr "Esselamü aleyküm"
+
+msgid "blessing_wa_alaikum_assalam"
+msgstr "Ve aleykümüsselam"
+
+# Cultural Elements
+msgid "culture_respect"
+msgstr "Saygı"
+
+msgid "culture_wisdom"
+msgstr "Hikmet"
+
+msgid "culture_compassion"
+msgstr "Merhamet"
+
+msgid "culture_unity"
+msgstr "Birlik"
+
+msgid "culture_peace"
+msgstr "Barış"
+
+msgid "culture_harmony"
+msgstr "Uyum"
+
+msgid "culture_gratitude"
+msgstr "Şükran"
+
+msgid "culture_patience"
+msgstr "Sabır"
+
+msgid "culture_kindness"
+msgstr "İyilik"
+
+msgid "culture_humility"
+msgstr "Alçakgönüllülük"

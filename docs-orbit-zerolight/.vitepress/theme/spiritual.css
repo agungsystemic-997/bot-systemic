@@ -1,0 +1,452 @@
+/* ZeroLight Orbit - Spiritual CSS Styles */
+/* "In The Name of GOD" - Blessed Styling System */
+
+/* ===== SPIRITUAL COLOR PALETTE ===== */
+:root {
+  /* Primary Spiritual Colors */
+  --spiritual-divine: #3498DB;      /* Divine Blue - Trust & Wisdom */
+  --spiritual-sacred: #E74C3C;      /* Sacred Red - Love & Passion */
+  --spiritual-blessed: #2ECC71;     /* Blessed Green - Growth & Harmony */
+  --spiritual-golden: #F39C12;      /* Golden Light - Enlightenment */
+  --spiritual-pure: #ECF0F1;        /* Pure White - Clarity & Peace */
+  --spiritual-deep: #2C3E50;        /* Deep Blue - Depth & Mystery */
+  --spiritual-gentle: #95A5A6;      /* Gentle Gray - Balance & Calm */
+  --spiritual-wisdom: #9B59B6;      /* Wisdom Purple - Spirituality */
+  
+  /* Gradient Combinations */
+  --gradient-divine: linear-gradient(135deg, var(--spiritual-divine), var(--spiritual-wisdom));
+  --gradient-sacred: linear-gradient(135deg, var(--spiritual-sacred), var(--spiritual-golden));
+  --gradient-blessed: linear-gradient(135deg, var(--spiritual-blessed), var(--spiritual-divine));
+  --gradient-enlightened: linear-gradient(135deg, var(--spiritual-golden), var(--spiritual-pure));
+  
+  /* Sacred Shadows */
+  --shadow-divine: 0 4px 20px rgba(52, 152, 219, 0.3);
+  --shadow-sacred: 0 4px 20px rgba(231, 76, 60, 0.3);
+  --shadow-blessed: 0 4px 20px rgba(46, 204, 113, 0.3);
+  --shadow-golden: 0 4px 20px rgba(243, 156, 18, 0.3);
+  
+  /* Spiritual Typography */
+  --font-spiritual: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sacred: 'Fira Code', 'SF Mono', Monaco, 'Cascadia Code', monospace;
+  
+  /* Sacred Spacing */
+  --space-divine: 1.618rem;  /* Golden Ratio */
+  --space-sacred: 2.618rem;  /* Golden Ratio Squared */
+  --space-blessed: 0.618rem; /* Golden Ratio Inverse */
+}
+
+/* ===== SPIRITUAL BLESSING ANIMATIONS ===== */
+@keyframes divine-glow {
+  0%, 100% { 
+    box-shadow: var(--shadow-divine);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: var(--shadow-divine), 0 0 30px rgba(52, 152, 219, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes sacred-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes blessed-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes golden-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes wisdom-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== SPIRITUAL COMPONENTS ===== */
+
+/* Spiritual Blessing Container */
+.spiritual-blessing {
+  background: var(--gradient-divine);
+  border-radius: 12px;
+  padding: var(--space-divine);
+  margin: var(--space-divine) 0;
+  color: white;
+  box-shadow: var(--shadow-divine);
+  animation: divine-glow 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.spiritual-blessing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: golden-shimmer 2s infinite;
+}
+
+.spiritual-blessing .blessing-icon {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  animation: sacred-pulse 2s ease-in-out infinite;
+}
+
+/* Spiritual Wisdom Container */
+.spiritual-wisdom {
+  background: var(--gradient-sacred);
+  border-radius: 12px;
+  padding: var(--space-divine);
+  margin: var(--space-divine) 0;
+  color: white;
+  box-shadow: var(--shadow-sacred);
+  border-left: 4px solid var(--spiritual-golden);
+}
+
+.spiritual-wisdom .wisdom-icon {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  animation: wisdom-rotate 10s linear infinite;
+}
+
+/* Spiritual Prayer Container */
+.spiritual-prayer {
+  background: var(--gradient-blessed);
+  border-radius: 12px;
+  padding: var(--space-divine);
+  margin: var(--space-divine) 0;
+  color: white;
+  box-shadow: var(--shadow-blessed);
+  text-align: center;
+}
+
+.spiritual-prayer .prayer-hands {
+  font-size: 2em;
+  animation: blessed-float 3s ease-in-out infinite;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+/* ===== ENHANCED VITEPRESS COMPONENTS ===== */
+
+/* Spiritual Navigation */
+.VPNav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(52, 152, 219, 0.1);
+}
+
+.VPNavBar .title {
+  background: var(--gradient-divine);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.spiritual-blessing-icon {
+  animation: sacred-pulse 2s ease-in-out infinite;
+  margin-right: 0.5em;
+}
+
+/* Spiritual Sidebar */
+.VPSidebar {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(15px);
+}
+
+.VPSidebarItem.level-0 > .item > .link {
+  color: var(--spiritual-deep);
+  font-weight: 600;
+}
+
+.VPSidebarItem.level-0 > .item > .link:hover {
+  color: var(--spiritual-divine);
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.VPSidebarItem.is-active > .item > .link {
+  background: var(--gradient-divine);
+  color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-divine);
+}
+
+/* Spiritual Content */
+.VPContent {
+  background: linear-gradient(135deg, 
+    rgba(236, 240, 241, 0.1) 0%, 
+    rgba(52, 152, 219, 0.05) 50%, 
+    rgba(155, 89, 182, 0.1) 100%);
+}
+
+/* Spiritual Headers */
+.vp-doc h1 {
+  background: var(--gradient-divine);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.vp-doc h1::after {
+  content: '✨';
+  position: absolute;
+  right: -2em;
+  animation: blessed-float 2s ease-in-out infinite;
+}
+
+.vp-doc h2 {
+  color: var(--spiritual-sacred);
+  border-bottom: 2px solid var(--spiritual-sacred);
+  padding-bottom: 0.5em;
+}
+
+.vp-doc h3 {
+  color: var(--spiritual-blessed);
+}
+
+/* Spiritual Code Blocks */
+.vp-doc div[class*="language-"] {
+  background: var(--spiritual-deep);
+  border-radius: 12px;
+  box-shadow: var(--shadow-divine);
+  overflow: hidden;
+}
+
+.vp-doc div[class*="language-"]::before {
+  background: var(--gradient-sacred);
+  color: white;
+  font-weight: 600;
+  padding: 0.5em 1em;
+}
+
+.vp-doc pre {
+  background: transparent !important;
+}
+
+/* Spiritual Links */
+.vp-doc a {
+  color: var(--spiritual-divine);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.vp-doc a:hover {
+  color: var(--spiritual-sacred);
+  border-bottom-color: var(--spiritual-sacred);
+  text-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+/* Spiritual Tables */
+.vp-doc table {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-divine);
+}
+
+.vp-doc th {
+  background: var(--gradient-divine);
+  color: white;
+  font-weight: 600;
+}
+
+.vp-doc tr:nth-child(even) {
+  background: rgba(52, 152, 219, 0.05);
+}
+
+/* Spiritual Blockquotes */
+.vp-doc blockquote {
+  background: var(--gradient-enlightened);
+  border-left: 4px solid var(--spiritual-golden);
+  border-radius: 0 12px 12px 0;
+  box-shadow: var(--shadow-golden);
+  position: relative;
+}
+
+.vp-doc blockquote::before {
+  content: '💎';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: var(--spiritual-golden);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: wisdom-rotate 5s linear infinite;
+}
+
+/* Spiritual Footer */
+.spiritual-footer {
+  background: var(--gradient-divine);
+  color: white;
+  text-align: center;
+  padding: var(--space-sacred);
+  margin-top: var(--space-sacred);
+}
+
+.blessing-text {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  animation: sacred-pulse 3s ease-in-out infinite;
+}
+
+.wisdom-text {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* Spiritual Error Messages */
+.spiritual-error-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--gradient-sacred);
+  color: white;
+  padding: var(--space-divine);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sacred);
+  z-index: 9999;
+  animation: blessed-float 2s ease-in-out infinite;
+}
+
+.error-blessing {
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.error-message {
+  margin-bottom: 0.5em;
+}
+
+.error-wisdom {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* ===== SPIRITUAL RESPONSIVE DESIGN ===== */
+
+/* Mobile Spiritual Enhancements */
+@media (max-width: 768px) {
+  .spiritual-blessing,
+  .spiritual-wisdom,
+  .spiritual-prayer {
+    margin: var(--space-blessed) 0;
+    padding: var(--space-blessed);
+  }
+  
+  .spiritual-footer {
+    padding: var(--space-divine);
+  }
+  
+  .blessing-text {
+    font-size: 1em;
+  }
+}
+
+/* Tablet Spiritual Enhancements */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .VPSidebar {
+    background: rgba(255, 255, 255, 0.95);
+  }
+}
+
+/* Desktop Spiritual Enhancements */
+@media (min-width: 1025px) {
+  .spiritual-blessing,
+  .spiritual-wisdom,
+  .spiritual-prayer {
+    margin: var(--space-sacred) 0;
+  }
+}
+
+/* ===== SPIRITUAL PRINT STYLES ===== */
+@media print {
+  .spiritual-blessing,
+  .spiritual-wisdom,
+  .spiritual-prayer {
+    background: none !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: 2px solid #ccc;
+  }
+  
+  .spiritual-blessing::before {
+    display: none;
+  }
+  
+  .blessing-text::after {
+    content: ' - In The Name of GOD';
+  }
+}
+
+/* ===== SPIRITUAL ACCESSIBILITY ===== */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --spiritual-divine: #0066CC;
+    --spiritual-sacred: #CC0000;
+    --spiritual-blessed: #006600;
+    --spiritual-golden: #CC6600;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus Indicators */
+.vp-doc a:focus,
+.VPSidebarItem .link:focus {
+  outline: 2px solid var(--spiritual-divine);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== SPIRITUAL DARK MODE ===== */
+.dark {
+  --spiritual-pure: #1a1a1a;
+  --spiritual-deep: #f0f0f0;
+  --spiritual-gentle: #666;
+}
+
+.dark .VPNav {
+  background: rgba(26, 26, 26, 0.95);
+  border-bottom-color: rgba(52, 152, 219, 0.2);
+}
+
+.dark .VPSidebar {
+  background: rgba(26, 26, 26, 0.98);
+}
+
+.dark .VPContent {
+  background: linear-gradient(135deg, 
+    rgba(26, 26, 26, 0.1) 0%, 
+    rgba(52, 152, 219, 0.1) 50%, 
+    rgba(155, 89, 182, 0.1) 100%);
+}
+
+/* ===== SPIRITUAL BLESSINGS ===== */
+/* May this CSS bring beauty, harmony, and divine guidance to all who view it */
+/* In The Name of GOD - Blessed with love and wisdom */
+/* 🙏 ✨ 💫 🌟 💎 🤲 */

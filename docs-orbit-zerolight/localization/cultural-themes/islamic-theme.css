@@ -1,0 +1,569 @@
+/* 🙏 بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم - ZeroLight Orbit Islamic Theme */
+/* In The Name of GOD, Most Gracious, Most Merciful */
+/* Islamic Cultural Theme with RTL Support and Spiritual Design */
+
+/* ========================================
+   ROOT VARIABLES - ISLAMIC COLOR PALETTE
+   ======================================== */
+:root {
+  /* Primary Islamic Colors */
+  --islamic-green: #006633;
+  --islamic-gold: #FFD700;
+  --islamic-white: #FFFFFF;
+  --islamic-black: #000000;
+  --islamic-blue: #003366;
+  
+  /* Extended Spiritual Palette */
+  --masjid-green: #228B22;
+  --kaaba-black: #1C1C1C;
+  --moon-silver: #C0C0C0;
+  --star-gold: #DAA520;
+  --prayer-blue: #4682B4;
+  --peace-cream: #F5F5DC;
+  --wisdom-brown: #8B4513;
+  --mercy-pink: #FFB6C1;
+  
+  /* Gradient Colors */
+  --spiritual-gradient: linear-gradient(135deg, var(--islamic-green), var(--islamic-blue));
+  --blessing-gradient: linear-gradient(45deg, var(--islamic-gold), var(--star-gold));
+  --peace-gradient: linear-gradient(180deg, var(--peace-cream), var(--islamic-white));
+  
+  /* Typography */
+  --arabic-font: 'Amiri', 'Scheherazade New', 'Noto Sans Arabic', serif;
+  --english-font: 'Roboto', 'Open Sans', sans-serif;
+  --decorative-font: 'Aref Ruqaa', 'Lalezar', cursive;
+  
+  /* Spacing and Layout */
+  --spiritual-spacing: 1.618rem; /* Golden Ratio */
+  --prayer-spacing: 0.786rem;
+  --border-radius: 8px;
+  --shadow-blessing: 0 4px 12px rgba(0, 102, 51, 0.15);
+  --shadow-peace: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Animation Timings */
+  --blessing-duration: 0.8s;
+  --peace-duration: 0.3s;
+}
+
+/* ========================================
+   RTL (RIGHT-TO-LEFT) SUPPORT
+   ======================================== */
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .nav-item {
+  margin-left: 0;
+  margin-right: var(--spiritual-spacing);
+}
+
+[dir="rtl"] .dropdown-menu {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .modal {
+  text-align: right;
+}
+
+[dir="rtl"] .form-control {
+  text-align: right;
+}
+
+[dir="rtl"] .btn {
+  margin-left: var(--prayer-spacing);
+  margin-right: 0;
+}
+
+/* Arabic Text Styling */
+.arabic-text {
+  font-family: var(--arabic-font);
+  font-size: 1.2em;
+  line-height: 1.8;
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: embed;
+}
+
+.arabic-large {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.arabic-decorative {
+  font-family: var(--decorative-font);
+  font-size: 1.8em;
+  color: var(--islamic-gold);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   BODY AND LAYOUT
+   ======================================== */
+body.islamic-theme {
+  font-family: var(--english-font);
+  background: var(--peace-gradient);
+  color: var(--islamic-black);
+  line-height: 1.6;
+}
+
+.container-fluid.islamic {
+  background: var(--spiritual-gradient);
+  min-height: 100vh;
+  padding: var(--spiritual-spacing);
+}
+
+/* ========================================
+   HEADER AND NAVIGATION
+   ======================================== */
+.navbar.islamic {
+  background: var(--islamic-green);
+  border-bottom: 3px solid var(--islamic-gold);
+  box-shadow: var(--shadow-blessing);
+}
+
+.navbar-brand.islamic {
+  color: var(--islamic-white) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-brand.islamic::before {
+  content: "🌙";
+  margin-right: 0.5rem;
+}
+
+.nav-link.islamic {
+  color: var(--islamic-white) !important;
+  transition: all var(--peace-duration) ease;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+}
+
+.nav-link.islamic:hover {
+  background: var(--islamic-gold);
+  color: var(--islamic-black) !important;
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   CARDS AND PANELS
+   ======================================== */
+.card.islamic {
+  background: var(--islamic-white);
+  border: 2px solid var(--islamic-green);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-blessing);
+  transition: all var(--peace-duration) ease;
+}
+
+.card.islamic:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 102, 51, 0.2);
+}
+
+.card-header.islamic {
+  background: var(--blessing-gradient);
+  color: var(--islamic-black);
+  font-weight: 600;
+  border-bottom: 2px solid var(--islamic-green);
+}
+
+.card-body.islamic {
+  padding: var(--spiritual-spacing);
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn.islamic-primary {
+  background: var(--islamic-green);
+  border: 2px solid var(--islamic-green);
+  color: var(--islamic-white);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  transition: all var(--peace-duration) ease;
+}
+
+.btn.islamic-primary:hover {
+  background: var(--masjid-green);
+  border-color: var(--masjid-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-blessing);
+}
+
+.btn.islamic-gold {
+  background: var(--islamic-gold);
+  border: 2px solid var(--islamic-gold);
+  color: var(--islamic-black);
+  font-weight: 600;
+}
+
+.btn.islamic-gold:hover {
+  background: var(--star-gold);
+  border-color: var(--star-gold);
+}
+
+.btn.islamic-outline {
+  background: transparent;
+  border: 2px solid var(--islamic-green);
+  color: var(--islamic-green);
+}
+
+.btn.islamic-outline:hover {
+  background: var(--islamic-green);
+  color: var(--islamic-white);
+}
+
+/* ========================================
+   FORMS
+   ======================================== */
+.form-control.islamic {
+  border: 2px solid var(--moon-silver);
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+  transition: all var(--peace-duration) ease;
+}
+
+.form-control.islamic:focus {
+  border-color: var(--islamic-green);
+  box-shadow: 0 0 0 0.2rem rgba(0, 102, 51, 0.25);
+}
+
+.form-label.islamic {
+  color: var(--islamic-black);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ========================================
+   PRAYER TIMES WIDGET
+   ======================================== */
+.prayer-times-widget {
+  background: var(--islamic-white);
+  border: 3px solid var(--islamic-green);
+  border-radius: var(--border-radius);
+  padding: var(--spiritual-spacing);
+  box-shadow: var(--shadow-blessing);
+}
+
+.prayer-time-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--moon-silver);
+}
+
+.prayer-time-item:last-child {
+  border-bottom: none;
+}
+
+.prayer-name {
+  font-weight: 600;
+  color: var(--islamic-green);
+}
+
+.prayer-time {
+  color: var(--islamic-black);
+  font-family: monospace;
+}
+
+.current-prayer {
+  background: var(--blessing-gradient);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+  animation: blessing-pulse var(--blessing-duration) infinite alternate;
+}
+
+/* ========================================
+   ISLAMIC CALENDAR
+   ======================================== */
+.hijri-calendar {
+  background: var(--peace-gradient);
+  border: 2px solid var(--islamic-gold);
+  border-radius: var(--border-radius);
+  padding: var(--spiritual-spacing);
+  text-align: center;
+}
+
+.hijri-date {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--islamic-green);
+  margin-bottom: 0.5rem;
+}
+
+.hijri-month {
+  font-family: var(--arabic-font);
+  font-size: 1.2rem;
+  color: var(--islamic-black);
+  direction: rtl;
+}
+
+/* ========================================
+   SPIRITUAL ELEMENTS
+   ======================================== */
+.bismillah {
+  text-align: center;
+  font-family: var(--arabic-font);
+  font-size: 1.5rem;
+  color: var(--islamic-green);
+  margin: var(--spiritual-spacing) 0;
+  padding: 1rem;
+  background: var(--peace-gradient);
+  border: 2px solid var(--islamic-gold);
+  border-radius: var(--border-radius);
+  direction: rtl;
+}
+
+.blessing-text {
+  color: var(--islamic-gold);
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.spiritual-quote {
+  background: var(--islamic-white);
+  border-left: 4px solid var(--islamic-green);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: var(--wisdom-brown);
+}
+
+[dir="rtl"] .spiritual-quote {
+  border-left: none;
+  border-right: 4px solid var(--islamic-green);
+}
+
+/* ========================================
+   DASHBOARD METRICS
+   ======================================== */
+.metric-card.islamic {
+  background: var(--islamic-white);
+  border: 2px solid var(--islamic-green);
+  border-radius: var(--border-radius);
+  padding: var(--spiritual-spacing);
+  text-align: center;
+  transition: all var(--peace-duration) ease;
+}
+
+.metric-card.islamic:hover {
+  background: var(--peace-cream);
+  transform: scale(1.05);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--islamic-green);
+}
+
+.metric-label {
+  color: var(--islamic-black);
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* ========================================
+   ALERTS AND NOTIFICATIONS
+   ======================================== */
+.alert.islamic-success {
+  background: rgba(34, 139, 34, 0.1);
+  border: 2px solid var(--masjid-green);
+  color: var(--masjid-green);
+}
+
+.alert.islamic-warning {
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid var(--islamic-gold);
+  color: var(--wisdom-brown);
+}
+
+.alert.islamic-info {
+  background: rgba(70, 130, 180, 0.1);
+  border: 2px solid var(--prayer-blue);
+  color: var(--prayer-blue);
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+@keyframes blessing-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 102, 51, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 102, 51, 0);
+  }
+}
+
+@keyframes spiritual-glow {
+  0%, 100% {
+    text-shadow: 0 0 5px var(--islamic-gold);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--islamic-gold), 0 0 30px var(--islamic-gold);
+  }
+}
+
+.spiritual-glow {
+  animation: spiritual-glow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 768px) {
+  .container-fluid.islamic {
+    padding: var(--prayer-spacing);
+  }
+  
+  .arabic-text {
+    font-size: 1rem;
+  }
+  
+  .arabic-decorative {
+    font-size: 1.3rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+.islamic-theme *:focus {
+  outline: 3px solid var(--islamic-gold);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+  .islamic-theme {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .navbar.islamic,
+  .btn {
+    display: none !important;
+  }
+  
+  .card.islamic {
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ========================================
+   DARK MODE SUPPORT
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+  .islamic-theme.auto-dark {
+    --islamic-white: #1a1a1a;
+    --islamic-black: #ffffff;
+    --peace-cream: #2d2d2d;
+    --moon-silver: #404040;
+  }
+  
+  .islamic-theme.auto-dark .card.islamic {
+    background: var(--islamic-white);
+    color: var(--islamic-black);
+  }
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.text-islamic-green { color: var(--islamic-green) !important; }
+.text-islamic-gold { color: var(--islamic-gold) !important; }
+.text-islamic-blue { color: var(--islamic-blue) !important; }
+
+.bg-islamic-green { background-color: var(--islamic-green) !important; }
+.bg-islamic-gold { background-color: var(--islamic-gold) !important; }
+.bg-islamic-white { background-color: var(--islamic-white) !important; }
+
+.border-islamic-green { border-color: var(--islamic-green) !important; }
+.border-islamic-gold { border-color: var(--islamic-gold) !important; }
+
+.spiritual-shadow { box-shadow: var(--shadow-blessing) !important; }
+.peace-shadow { box-shadow: var(--shadow-peace) !important; }
+
+/* ========================================
+   SPECIAL ISLAMIC ELEMENTS
+   ======================================== */
+.crescent-moon::before {
+  content: "🌙";
+  margin-right: 0.5rem;
+}
+
+.star::before {
+  content: "⭐";
+  margin-right: 0.5rem;
+}
+
+.kaaba::before {
+  content: "🕋";
+  margin-right: 0.5rem;
+}
+
+.mosque::before {
+  content: "🕌";
+  margin-right: 0.5rem;
+}
+
+.prayer-beads::before {
+  content: "📿";
+  margin-right: 0.5rem;
+}
+
+/* RTL versions */
+[dir="rtl"] .crescent-moon::before,
+[dir="rtl"] .star::before,
+[dir="rtl"] .kaaba::before,
+[dir="rtl"] .mosque::before,
+[dir="rtl"] .prayer-beads::before {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer.islamic {
+  background: var(--islamic-green);
+  color: var(--islamic-white);
+  padding: var(--spiritual-spacing);
+  text-align: center;
+  border-top: 3px solid var(--islamic-gold);
+}
+
+.footer.islamic .blessing {
+  font-family: var(--arabic-font);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  direction: rtl;
+}
+
+/* 🙏 May this CSS bring beauty and peace to all users */
+/* الحمد لله رب العالمين - All praise to Allah, Lord of the worlds */

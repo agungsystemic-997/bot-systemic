@@ -1,0 +1,627 @@
+# 🙏 In The Name of GOD - ZeroLight Orbit English Translations
+# English (en) - Base Language
+# بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم
+
+msgid ""
+msgstr ""
+"Project-Id-Version: ZeroLight Orbit 1.0\n"
+"Report-Msgid-Bugs-To: support@zerolight-orbit.com\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: ZeroLight Orbit Team\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Application Name and Branding
+msgid "app_name"
+msgstr "ZeroLight Orbit"
+
+msgid "app_tagline"
+msgstr "Divine Digital Transformation Platform"
+
+msgid "app_blessing"
+msgstr "In The Name of GOD - Blessed Digital Experience"
+
+msgid "app_description"
+msgstr "A comprehensive spiritual technology platform for digital transformation"
+
+# Navigation and Menu Items
+msgid "nav_home"
+msgstr "Home"
+
+msgid "nav_dashboard"
+msgstr "Dashboard"
+
+msgid "nav_analytics"
+msgstr "Analytics"
+
+msgid "nav_security"
+msgstr "Security"
+
+msgid "nav_settings"
+msgstr "Settings"
+
+msgid "nav_profile"
+msgstr "Profile"
+
+msgid "nav_help"
+msgstr "Help"
+
+msgid "nav_about"
+msgstr "About"
+
+msgid "nav_logout"
+msgstr "Logout"
+
+# Authentication
+msgid "auth_login"
+msgstr "Login"
+
+msgid "auth_register"
+msgstr "Register"
+
+msgid "auth_username"
+msgstr "Username"
+
+msgid "auth_email"
+msgstr "Email"
+
+msgid "auth_password"
+msgstr "Password"
+
+msgid "auth_confirm_password"
+msgstr "Confirm Password"
+
+msgid "auth_forgot_password"
+msgstr "Forgot Password?"
+
+msgid "auth_remember_me"
+msgstr "Remember Me"
+
+msgid "auth_login_success"
+msgstr "Login successful! Welcome to ZeroLight Orbit"
+
+msgid "auth_login_failed"
+msgstr "Login failed. Please check your credentials"
+
+msgid "auth_register_success"
+msgstr "Registration successful! Welcome to our blessed platform"
+
+msgid "auth_logout_success"
+msgstr "Logged out successfully. May peace be with you"
+
+# Dashboard
+msgid "dashboard_welcome"
+msgstr "Welcome to ZeroLight Orbit Dashboard"
+
+msgid "dashboard_overview"
+msgstr "System Overview"
+
+msgid "dashboard_metrics"
+msgstr "Key Metrics"
+
+msgid "dashboard_recent_activity"
+msgstr "Recent Activity"
+
+msgid "dashboard_quick_actions"
+msgstr "Quick Actions"
+
+msgid "dashboard_system_health"
+msgstr "System Health"
+
+msgid "dashboard_performance"
+msgstr "Performance"
+
+msgid "dashboard_security_status"
+msgstr "Security Status"
+
+# Analytics
+msgid "analytics_title"
+msgstr "Analytics & Insights"
+
+msgid "analytics_user_engagement"
+msgstr "User Engagement"
+
+msgid "analytics_system_performance"
+msgstr "System Performance"
+
+msgid "analytics_security_metrics"
+msgstr "Security Metrics"
+
+msgid "analytics_spiritual_insights"
+msgstr "Spiritual Insights"
+
+msgid "analytics_export_data"
+msgstr "Export Data"
+
+msgid "analytics_generate_report"
+msgstr "Generate Report"
+
+# Security
+msgid "security_title"
+msgstr "Security Center"
+
+msgid "security_scan"
+msgstr "Security Scan"
+
+msgid "security_threats"
+msgstr "Threat Detection"
+
+msgid "security_encryption"
+msgstr "Encryption Status"
+
+msgid "security_backup"
+msgstr "Backup & Recovery"
+
+msgid "security_audit_log"
+msgstr "Audit Log"
+
+msgid "security_change_password"
+msgstr "Change Password"
+
+msgid "security_two_factor"
+msgstr "Two-Factor Authentication"
+
+msgid "security_scan_complete"
+msgstr "Security scan completed successfully"
+
+msgid "security_no_threats"
+msgstr "No security threats detected"
+
+# Settings
+msgid "settings_title"
+msgstr "Settings"
+
+msgid "settings_general"
+msgstr "General Settings"
+
+msgid "settings_appearance"
+msgstr "Appearance"
+
+msgid "settings_language"
+msgstr "Language"
+
+msgid "settings_notifications"
+msgstr "Notifications"
+
+msgid "settings_privacy"
+msgstr "Privacy"
+
+msgid "settings_advanced"
+msgstr "Advanced Settings"
+
+msgid "settings_save"
+msgstr "Save Settings"
+
+msgid "settings_reset"
+msgstr "Reset to Default"
+
+msgid "settings_saved"
+msgstr "Settings saved successfully"
+
+# Profile
+msgid "profile_title"
+msgstr "User Profile"
+
+msgid "profile_personal_info"
+msgstr "Personal Information"
+
+msgid "profile_spiritual_preferences"
+msgstr "Spiritual Preferences"
+
+msgid "profile_cultural_settings"
+msgstr "Cultural Settings"
+
+msgid "profile_timezone"
+msgstr "Time Zone"
+
+msgid "profile_calendar"
+msgstr "Calendar Type"
+
+msgid "profile_prayer_times"
+msgstr "Prayer Times"
+
+msgid "profile_update"
+msgstr "Update Profile"
+
+msgid "profile_updated"
+msgstr "Profile updated successfully"
+
+# Spiritual Elements
+msgid "spiritual_blessing"
+msgstr "Divine Blessing"
+
+msgid "spiritual_prayer_time"
+msgstr "Prayer Time"
+
+msgid "spiritual_islamic_calendar"
+msgstr "Islamic Calendar"
+
+msgid "spiritual_hijri_date"
+msgstr "Hijri Date"
+
+msgid "spiritual_lunar_calendar"
+msgstr "Lunar Calendar"
+
+msgid "spiritual_meditation"
+msgstr "Meditation"
+
+msgid "spiritual_reflection"
+msgstr "Spiritual Reflection"
+
+msgid "spiritual_guidance"
+msgstr "Divine Guidance"
+
+# Prayer Times
+msgid "prayer_fajr"
+msgstr "Fajr"
+
+msgid "prayer_dhuhr"
+msgstr "Dhuhr"
+
+msgid "prayer_asr"
+msgstr "Asr"
+
+msgid "prayer_maghrib"
+msgstr "Maghrib"
+
+msgid "prayer_isha"
+msgstr "Isha"
+
+msgid "prayer_sunrise"
+msgstr "Sunrise"
+
+msgid "prayer_sunset"
+msgstr "Sunset"
+
+# Islamic Months
+msgid "month_muharram"
+msgstr "Muharram"
+
+msgid "month_safar"
+msgstr "Safar"
+
+msgid "month_rabi_awwal"
+msgstr "Rabi' al-Awwal"
+
+msgid "month_rabi_thani"
+msgstr "Rabi' al-Thani"
+
+msgid "month_jumada_awwal"
+msgstr "Jumada al-Awwal"
+
+msgid "month_jumada_thani"
+msgstr "Jumada al-Thani"
+
+msgid "month_rajab"
+msgstr "Rajab"
+
+msgid "month_shaban"
+msgstr "Sha'ban"
+
+msgid "month_ramadan"
+msgstr "Ramadan"
+
+msgid "month_shawwal"
+msgstr "Shawwal"
+
+msgid "month_dhul_qadah"
+msgstr "Dhul Qi'dah"
+
+msgid "month_dhul_hijjah"
+msgstr "Dhul Hijjah"
+
+# Common Actions
+msgid "action_save"
+msgstr "Save"
+
+msgid "action_cancel"
+msgstr "Cancel"
+
+msgid "action_delete"
+msgstr "Delete"
+
+msgid "action_edit"
+msgstr "Edit"
+
+msgid "action_view"
+msgstr "View"
+
+msgid "action_download"
+msgstr "Download"
+
+msgid "action_upload"
+msgstr "Upload"
+
+msgid "action_search"
+msgstr "Search"
+
+msgid "action_filter"
+msgstr "Filter"
+
+msgid "action_sort"
+msgstr "Sort"
+
+msgid "action_refresh"
+msgstr "Refresh"
+
+msgid "action_close"
+msgstr "Close"
+
+msgid "action_minimize"
+msgstr "Minimize"
+
+msgid "action_maximize"
+msgstr "Maximize"
+
+# Status Messages
+msgid "status_loading"
+msgstr "Loading..."
+
+msgid "status_saving"
+msgstr "Saving..."
+
+msgid "status_success"
+msgstr "Success"
+
+msgid "status_error"
+msgstr "Error"
+
+msgid "status_warning"
+msgstr "Warning"
+
+msgid "status_info"
+msgstr "Information"
+
+msgid "status_connecting"
+msgstr "Connecting..."
+
+msgid "status_connected"
+msgstr "Connected"
+
+msgid "status_disconnected"
+msgstr "Disconnected"
+
+msgid "status_online"
+msgstr "Online"
+
+msgid "status_offline"
+msgstr "Offline"
+
+# Error Messages
+msgid "error_network"
+msgstr "Network connection error"
+
+msgid "error_server"
+msgstr "Server error occurred"
+
+msgid "error_validation"
+msgstr "Validation error"
+
+msgid "error_permission"
+msgstr "Permission denied"
+
+msgid "error_not_found"
+msgstr "Resource not found"
+
+msgid "error_timeout"
+msgstr "Request timeout"
+
+msgid "error_unknown"
+msgstr "Unknown error occurred"
+
+# Success Messages
+msgid "success_saved"
+msgstr "Data saved successfully"
+
+msgid "success_deleted"
+msgstr "Item deleted successfully"
+
+msgid "success_updated"
+msgstr "Information updated successfully"
+
+msgid "success_uploaded"
+msgstr "File uploaded successfully"
+
+msgid "success_downloaded"
+msgstr "File downloaded successfully"
+
+# Confirmation Messages
+msgid "confirm_delete"
+msgstr "Are you sure you want to delete this item?"
+
+msgid "confirm_logout"
+msgstr "Are you sure you want to logout?"
+
+msgid "confirm_reset"
+msgstr "Are you sure you want to reset settings?"
+
+msgid "confirm_save"
+msgstr "Do you want to save your changes?"
+
+# Time and Date
+msgid "time_now"
+msgstr "Now"
+
+msgid "time_today"
+msgstr "Today"
+
+msgid "time_yesterday"
+msgstr "Yesterday"
+
+msgid "time_tomorrow"
+msgstr "Tomorrow"
+
+msgid "time_this_week"
+msgstr "This Week"
+
+msgid "time_last_week"
+msgstr "Last Week"
+
+msgid "time_this_month"
+msgstr "This Month"
+
+msgid "time_last_month"
+msgstr "Last Month"
+
+# Days of Week
+msgid "day_sunday"
+msgstr "Sunday"
+
+msgid "day_monday"
+msgstr "Monday"
+
+msgid "day_tuesday"
+msgstr "Tuesday"
+
+msgid "day_wednesday"
+msgstr "Wednesday"
+
+msgid "day_thursday"
+msgstr "Thursday"
+
+msgid "day_friday"
+msgstr "Friday"
+
+msgid "day_saturday"
+msgstr "Saturday"
+
+# Months
+msgid "month_january"
+msgstr "January"
+
+msgid "month_february"
+msgstr "February"
+
+msgid "month_march"
+msgstr "March"
+
+msgid "month_april"
+msgstr "April"
+
+msgid "month_may"
+msgstr "May"
+
+msgid "month_june"
+msgstr "June"
+
+msgid "month_july"
+msgstr "July"
+
+msgid "month_august"
+msgstr "August"
+
+msgid "month_september"
+msgstr "September"
+
+msgid "month_october"
+msgstr "October"
+
+msgid "month_november"
+msgstr "November"
+
+msgid "month_december"
+msgstr "December"
+
+# Numbers
+msgid "number_zero"
+msgstr "Zero"
+
+msgid "number_one"
+msgstr "One"
+
+msgid "number_two"
+msgstr "Two"
+
+msgid "number_three"
+msgstr "Three"
+
+msgid "number_four"
+msgstr "Four"
+
+msgid "number_five"
+msgstr "Five"
+
+msgid "number_six"
+msgstr "Six"
+
+msgid "number_seven"
+msgstr "Seven"
+
+msgid "number_eight"
+msgstr "Eight"
+
+msgid "number_nine"
+msgstr "Nine"
+
+msgid "number_ten"
+msgstr "Ten"
+
+# Spiritual Blessings
+msgid "blessing_bismillah"
+msgstr "In The Name of GOD"
+
+msgid "blessing_alhamdulillah"
+msgstr "All Praise to GOD"
+
+msgid "blessing_subhanallah"
+msgstr "Glory to GOD"
+
+msgid "blessing_allahu_akbar"
+msgstr "GOD is Greatest"
+
+msgid "blessing_la_ilaha_illa_allah"
+msgstr "There is no god but GOD"
+
+msgid "blessing_astaghfirullah"
+msgstr "I seek forgiveness from GOD"
+
+msgid "blessing_inshallah"
+msgstr "GOD willing"
+
+msgid "blessing_mashallah"
+msgstr "What GOD has willed"
+
+msgid "blessing_barakallahu_feek"
+msgstr "May GOD bless you"
+
+msgid "blessing_assalamu_alaikum"
+msgstr "Peace be upon you"
+
+msgid "blessing_wa_alaikum_assalam"
+msgstr "And upon you peace"
+
+# Cultural Elements
+msgid "culture_respect"
+msgstr "Respect"
+
+msgid "culture_wisdom"
+msgstr "Wisdom"
+
+msgid "culture_compassion"
+msgstr "Compassion"
+
+msgid "culture_unity"
+msgstr "Unity"
+
+msgid "culture_peace"
+msgstr "Peace"
+
+msgid "culture_harmony"
+msgstr "Harmony"
+
+msgid "culture_gratitude"
+msgstr "Gratitude"
+
+msgid "culture_patience"
+msgstr "Patience"
+
+msgid "culture_kindness"
+msgstr "Kindness"
+
+msgid "culture_humility"
+msgstr "Humility"

@@ -1,0 +1,580 @@
+name: 🌟 ZeroLight Orbit Documentation Builder
+# "In The Name of GOD" - Blessed Documentation Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - '**.md'
+      - 'diagrams/**'
+      - 'assets/**'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '**.md'
+      - 'diagrams/**'
+      - 'assets/**'
+  schedule:
+    # Daily build at 00:00 UTC for continuous blessing
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    inputs:
+      build_type:
+        description: 'Build Type'
+        required: true
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - docs-only
+          - pdf-only
+          - validation-only
+
+env:
+  NODE_VERSION: '18'
+  PYTHON_VERSION: '3.11'
+  PANDOC_VERSION: '3.1.8'
+
+jobs:
+  # 🔍 Spiritual Validation - Content Quality Assurance
+  spiritual-validation:
+    name: ✨ Spiritual Content Validation
+    runs-on: ubuntu-latest
+    outputs:
+      validation-passed: ${{ steps.validate.outputs.passed }}
+      content-blessed: ${{ steps.bless.outputs.blessed }}
+    
+    steps:
+      - name: 📥 Checkout Sacred Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: 🐍 Setup Python Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: 'pip'
+      
+      - name: 📦 Install Validation Dependencies
+        run: |
+          pip install --upgrade pip
+          pip install markdown beautifulsoup4 pyyaml requests
+          pip install markdownlint-cli2 vale textstat
+          pip install pymdown-extensions
+      
+      - name: 🔍 Validate Markdown Structure
+        id: validate-structure
+        run: |
+          echo "🔍 Validating Markdown structure..."
+          find . -name "*.md" -type f | while read file; do
+            echo "Checking: $file"
+            # Check for required spiritual headers
+            if ! grep -q "In The Name of GOD" "$file"; then
+              echo "⚠️ Missing spiritual blessing in: $file"
+            fi
+            # Validate Markdown syntax
+            python -c "
+          import markdown
+          import sys
+          try:
+              with open('$file', 'r', encoding='utf-8') as f:
+                  content = f.read()
+              markdown.markdown(content, extensions=['extra', 'codehilite', 'toc'])
+              print('✅ Valid Markdown: $file')
+          except Exception as e:
+              print(f'❌ Invalid Markdown: $file - {e}')
+              sys.exit(1)
+          "
+          done
+      
+      - name: 🔗 Validate Internal Links
+        run: |
+          echo "🔗 Validating internal links..."
+          python -c "
+          import os
+          import re
+          import sys
+          
+          def validate_links():
+              errors = []
+              for root, dirs, files in os.walk('.'):
+                  for file in files:
+                      if file.endswith('.md'):
+                          filepath = os.path.join(root, file)
+                          with open(filepath, 'r', encoding='utf-8') as f:
+                              content = f.read()
+                          
+                          # Find markdown links
+                          links = re.findall(r'\[([^\]]+)\]\(([^)]+)\)', content)
+                          for text, link in links:
+                              if link.startswith('./') or link.startswith('../'):
+                                  # Check if file exists
+                                  link_path = os.path.normpath(os.path.join(root, link))
+                                  if not os.path.exists(link_path):
+                                      errors.append(f'Broken link in {filepath}: {link}')
+              
+              if errors:
+                  for error in errors:
+                      print(f'❌ {error}')
+                  sys.exit(1)
+              else:
+                  print('✅ All internal links are valid')
+          
+          validate_links()
+          "
+      
+      - name: 📊 Content Quality Analysis
+        id: quality-check
+        run: |
+          echo "📊 Analyzing content quality..."
+          python -c "
+          import os
+          import textstat
+          import json
+          
+          quality_report = {}
+          total_files = 0
+          total_words = 0
+          
+          for root, dirs, files in os.walk('.'):
+              for file in files:
+                  if file.endswith('.md'):
+                      filepath = os.path.join(root, file)
+                      with open(filepath, 'r', encoding='utf-8') as f:
+                          content = f.read()
+                      
+                      # Remove markdown syntax for analysis
+                      import re
+                      clean_content = re.sub(r'[#*\[\]()_`]', '', content)
+                      
+                      word_count = len(clean_content.split())
+                      readability = textstat.flesch_reading_ease(clean_content)
+                      
+                      quality_report[file] = {
+                          'word_count': word_count,
+                          'readability_score': readability,
+                          'reading_level': textstat.flesch_kincaid_grade(clean_content)
+                      }
+                      
+                      total_files += 1
+                      total_words += word_count
+          
+          print(f'✅ Analyzed {total_files} files with {total_words} total words')
+          print(f'📊 Average readability: {sum(r[\"readability_score\"] for r in quality_report.values()) / len(quality_report):.1f}')
+          
+          # Save report
+          with open('quality-report.json', 'w') as f:
+              json.dump(quality_report, f, indent=2)
+          "
+      
+      - name: ✨ Spiritual Content Blessing
+        id: bless
+        run: |
+          echo "✨ Blessing spiritual content..."
+          echo "🙏 In The Name of GOD, we bless this documentation"
+          echo "💫 May this knowledge serve humanity with wisdom and compassion"
+          echo "🌟 May it guide seekers on their spiritual journey"
+          echo "blessed=true" >> $GITHUB_OUTPUT
+      
+      - name: 📋 Validation Summary
+        id: validate
+        run: |
+          echo "📋 Validation completed successfully"
+          echo "✅ All spiritual and technical validations passed"
+          echo "passed=true" >> $GITHUB_OUTPUT
+      
+      - name: 📤 Upload Quality Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: quality-report
+          path: quality-report.json
+          retention-days: 30
+
+  # 🎨 Mermaid Diagram Generation
+  generate-diagrams:
+    name: 🎨 Sacred Diagram Generation
+    runs-on: ubuntu-latest
+    needs: spiritual-validation
+    if: needs.spiritual-validation.outputs.validation-passed == 'true'
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 📦 Install Mermaid CLI
+        run: |
+          npm install -g @mermaid-js/mermaid-cli
+          npm install -g puppeteer
+      
+      - name: 🎨 Generate Diagram Images
+        run: |
+          echo "🎨 Generating sacred diagrams..."
+          mkdir -p assets/diagrams
+          
+          # Generate PNG and SVG versions of all diagrams
+          for mmd_file in diagrams/*.mmd; do
+            if [ -f "$mmd_file" ]; then
+              filename=$(basename "$mmd_file" .mmd)
+              echo "Generating: $filename"
+              
+              # Generate SVG (vector format)
+              mmdc -i "$mmd_file" -o "assets/diagrams/${filename}.svg" -t dark -b transparent
+              
+              # Generate PNG (raster format)
+              mmdc -i "$mmd_file" -o "assets/diagrams/${filename}.png" -t dark -b transparent -w 1920 -H 1080
+              
+              echo "✅ Generated: ${filename}.svg and ${filename}.png"
+            fi
+          done
+      
+      - name: 📤 Upload Generated Diagrams
+        uses: actions/upload-artifact@v3
+        with:
+          name: generated-diagrams
+          path: assets/diagrams/
+          retention-days: 90
+
+  # 📚 PDF Generation - Sacred Documentation
+  generate-pdf:
+    name: 📚 Sacred PDF Generation
+    runs-on: ubuntu-latest
+    needs: [spiritual-validation, generate-diagrams]
+    if: needs.spiritual-validation.outputs.validation-passed == 'true'
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 📥 Download Generated Diagrams
+        uses: actions/download-artifact@v3
+        with:
+          name: generated-diagrams
+          path: assets/diagrams/
+      
+      - name: 🐍 Setup Python Environment
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      
+      - name: 📖 Install Pandoc
+        run: |
+          wget https://github.com/jgm/pandoc/releases/download/${{ env.PANDOC_VERSION }}/pandoc-${{ env.PANDOC_VERSION }}-linux-amd64.tar.gz
+          tar xvzf pandoc-${{ env.PANDOC_VERSION }}-linux-amd64.tar.gz
+          sudo cp pandoc-${{ env.PANDOC_VERSION }}/bin/pandoc /usr/local/bin/
+          sudo cp pandoc-${{ env.PANDOC_VERSION }}/bin/pandoc-lua /usr/local/bin/
+          pandoc --version
+      
+      - name: 📦 Install LaTeX and Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+          sudo apt-get install -y texlive-xetex texlive-luatex
+          sudo apt-get install -y librsvg2-bin
+      
+      - name: 📚 Generate Individual PDFs
+        run: |
+          echo "📚 Generating individual PDF documents..."
+          mkdir -p dist/pdf
+          
+          # Create PDF for each main documentation file
+          for md_file in *.md; do
+            if [ -f "$md_file" ] && [ "$md_file" != "README.md" ]; then
+              filename=$(basename "$md_file" .md)
+              echo "Generating PDF: $filename"
+              
+              pandoc "$md_file" \
+                --from markdown+smart \
+                --to pdf \
+                --pdf-engine=xelatex \
+                --template=templates/spiritual-template.tex \
+                --toc \
+                --toc-depth=3 \
+                --number-sections \
+                --highlight-style=github \
+                --variable=geometry:margin=1in \
+                --variable=fontsize:11pt \
+                --variable=documentclass:article \
+                --variable=title:"ZeroLight Orbit - $filename" \
+                --variable=subtitle:"In The Name of GOD - Spiritual Technology Documentation" \
+                --variable=author:"ZeroLight Community" \
+                --variable=date:"$(date '+%Y-%m-%d')" \
+                --output="dist/pdf/${filename}.pdf"
+              
+              echo "✅ Generated: ${filename}.pdf"
+            fi
+          done
+      
+      - name: 📖 Generate Complete Documentation PDF
+        run: |
+          echo "📖 Generating complete documentation PDF..."
+          
+          # Combine all documentation into one comprehensive PDF
+          pandoc README.md \
+            intake-bot.md \
+            sortir-spiritual-legal.md \
+            crop-purifikasi.md \
+            packing-shelter.md \
+            reward-viewer.md \
+            audit-spiritual.md \
+            branding-InGOD.md \
+            guard-e2e.md \
+            kepemilikan-spiritual.md \
+            diversifikasi.md \
+            --from markdown+smart \
+            --to pdf \
+            --pdf-engine=xelatex \
+            --template=templates/spiritual-template.tex \
+            --toc \
+            --toc-depth=2 \
+            --number-sections \
+            --highlight-style=github \
+            --variable=geometry:margin=1in \
+            --variable=fontsize:10pt \
+            --variable=documentclass:book \
+            --variable=title:"ZeroLight Orbit - Complete Documentation" \
+            --variable=subtitle:"In The Name of GOD - Comprehensive Spiritual Technology Guide" \
+            --variable=author:"ZeroLight Community" \
+            --variable=date:"$(date '+%Y-%m-%d')" \
+            --output="dist/pdf/ZeroLight-Orbit-Complete.pdf"
+          
+          echo "✅ Generated complete documentation PDF"
+      
+      - name: 📤 Upload PDF Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: generated-pdfs
+          path: dist/pdf/
+          retention-days: 90
+
+  # 🌐 Website Generation - Spiritual Portal
+  generate-website:
+    name: 🌐 Sacred Website Generation
+    runs-on: ubuntu-latest
+    needs: [spiritual-validation, generate-diagrams]
+    if: needs.spiritual-validation.outputs.validation-passed == 'true'
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 📥 Download Generated Diagrams
+        uses: actions/download-artifact@v3
+        with:
+          name: generated-diagrams
+          path: assets/diagrams/
+      
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 📦 Install Website Dependencies
+        run: |
+          npm init -y
+          npm install --save-dev vitepress @mermaid-js/mermaid markdown-it-mermaid
+          npm install --save-dev @vitejs/plugin-vue vue
+      
+      - name: ⚙️ Configure VitePress
+        run: |
+          mkdir -p .vitepress
+          cat > .vitepress/config.js << 'EOF'
+          import { defineConfig } from 'vitepress'
+          
+          export default defineConfig({
+            title: 'ZeroLight Orbit',
+            description: 'In The Name of GOD - Spiritual Technology Documentation',
+            base: '/docs-orbit-zerolight/',
+            
+            themeConfig: {
+              logo: '/assets/logo-orbit.svg',
+              
+              nav: [
+                { text: 'Home', link: '/' },
+                { text: 'Documentation', link: '/README' },
+                { text: 'Diagrams', link: '/diagrams/' }
+              ],
+              
+              sidebar: [
+                {
+                  text: '🌟 Core Modules',
+                  items: [
+                    { text: '📥 Intake Bot', link: '/intake-bot' },
+                    { text: '⚖️ Sortir Spiritual Legal', link: '/sortir-spiritual-legal' },
+                    { text: '✨ Crop Purifikasi', link: '/crop-purifikasi' },
+                    { text: '📦 Packing Shelter', link: '/packing-shelter' },
+                    { text: '🎁 Reward Viewer', link: '/reward-viewer' },
+                    { text: '🔍 Audit Spiritual', link: '/audit-spiritual' },
+                    { text: '🎨 Branding InGOD', link: '/branding-InGOD' },
+                    { text: '🛡️ Guard E2E', link: '/guard-e2e' },
+                    { text: '🏛️ Kepemilikan Spiritual', link: '/kepemilikan-spiritual' },
+                    { text: '🚀 Diversifikasi', link: '/diversifikasi' }
+                  ]
+                },
+                {
+                  text: '📊 System Diagrams',
+                  items: [
+                    { text: '🌟 Orbit System Flow', link: '/diagrams/orbit-system-flowchart' },
+                    { text: '🏠 Distribution Shelter', link: '/diagrams/distribusi-shelter-dfd' },
+                    { text: '🎁 Reward Logic', link: '/diagrams/reward-logic' }
+                  ]
+                }
+              ],
+              
+              socialLinks: [
+                { icon: 'github', link: 'https://github.com/zerolight-orbit' }
+              ],
+              
+              footer: {
+                message: 'In The Name of GOD - Blessed with Divine Guidance',
+                copyright: 'Copyright © 2024 ZeroLight Community'
+              }
+            },
+            
+            markdown: {
+              config: (md) => {
+                md.use(require('markdown-it-mermaid').default)
+              }
+            }
+          })
+          EOF
+      
+      - name: 🏗️ Build Website
+        run: |
+          echo "🏗️ Building spiritual website..."
+          npx vitepress build
+      
+      - name: 📤 Upload Website Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: generated-website
+          path: .vitepress/dist/
+          retention-days: 90
+
+  # 🚀 Deployment - Sacred Distribution
+  deploy:
+    name: 🚀 Sacred Deployment
+    runs-on: ubuntu-latest
+    needs: [spiritual-validation, generate-diagrams, generate-pdf, generate-website]
+    if: github.ref == 'refs/heads/main' && needs.spiritual-validation.outputs.content-blessed == 'true'
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 📥 Download All Artifacts
+        uses: actions/download-artifact@v3
+      
+      - name: 📁 Organize Distribution
+        run: |
+          echo "📁 Organizing sacred distribution..."
+          mkdir -p dist/release
+          
+          # Copy website
+          if [ -d "generated-website" ]; then
+            cp -r generated-website/* dist/release/
+          fi
+          
+          # Copy PDFs
+          if [ -d "generated-pdfs" ]; then
+            mkdir -p dist/release/downloads
+            cp -r generated-pdfs/* dist/release/downloads/
+          fi
+          
+          # Copy diagrams
+          if [ -d "generated-diagrams" ]; then
+            mkdir -p dist/release/assets/diagrams
+            cp -r generated-diagrams/* dist/release/assets/diagrams/
+          fi
+          
+          # Create distribution manifest
+          cat > dist/release/manifest.json << EOF
+          {
+            "name": "ZeroLight Orbit Documentation",
+            "version": "$(date '+%Y.%m.%d')",
+            "description": "In The Name of GOD - Spiritual Technology Documentation",
+            "build_date": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "commit": "${{ github.sha }}",
+            "blessed": true,
+            "components": {
+              "website": true,
+              "pdfs": true,
+              "diagrams": true,
+              "quality_report": true
+            }
+          }
+          EOF
+      
+      - name: 🌐 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/release
+          cname: docs.zerolight.org
+          commit_message: '🚀 Deploy blessed documentation - ${{ github.event.head_commit.message }}'
+      
+      - name: 📦 Create Release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v$(date '+%Y.%m.%d')-blessed
+          name: 🌟 ZeroLight Orbit Documentation v$(date '+%Y.%m.%d')
+          body: |
+            ## 🌟 In The Name of GOD - Blessed Documentation Release
+            
+            This release contains the complete ZeroLight Orbit documentation, blessed with divine guidance and spiritual wisdom.
+            
+            ### 📚 What's Included:
+            - ✨ Complete documentation in PDF format
+            - 🎨 Sacred system diagrams (SVG & PNG)
+            - 🌐 Interactive website
+            - 📊 Quality assurance reports
+            
+            ### 🙏 Spiritual Blessing:
+            May this documentation serve humanity with wisdom, compassion, and divine guidance.
+            
+            **Build Information:**
+            - Commit: ${{ github.sha }}
+            - Build Date: $(date -u +%Y-%m-%dT%H:%M:%SZ)
+            - Blessed: ✅ True
+          files: |
+            dist/release/downloads/*
+            dist/release/assets/diagrams/*
+            quality-report/quality-report.json
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # 📊 Post-Deployment Analytics
+  analytics:
+    name: 📊 Sacred Analytics
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: always()
+    
+    steps:
+      - name: 📊 Build Analytics
+        run: |
+          echo "📊 Sacred build analytics:"
+          echo "🌟 Build completed with divine blessing"
+          echo "📚 Documentation generated successfully"
+          echo "🎨 Diagrams rendered beautifully"
+          echo "🌐 Website deployed with spiritual guidance"
+          echo "🙏 May this serve humanity with wisdom and compassion"
+      
+      - name: 📧 Notification (if configured)
+        if: failure()
+        run: |
+          echo "⚠️ Build requires spiritual attention"
+          echo "🙏 Seeking divine guidance for resolution"

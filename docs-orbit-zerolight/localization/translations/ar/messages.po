@@ -1,0 +1,627 @@
+# 🙏 بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم - ZeroLight Orbit Arabic Translations
+# Arabic (ar) - العربية
+# In The Name of GOD, Most Gracious, Most Merciful
+
+msgid ""
+msgstr ""
+"Project-Id-Version: ZeroLight Orbit 1.0\n"
+"Report-Msgid-Bugs-To: support@zerolight-orbit.com\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: ZeroLight Orbit Team\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+# Application Name and Branding
+msgid "app_name"
+msgstr "مدار النور الصفر"
+
+msgid "app_tagline"
+msgstr "منصة التحول الرقمي المباركة"
+
+msgid "app_blessing"
+msgstr "بِسْمِ اللَّهِ - تجربة رقمية مباركة"
+
+msgid "app_description"
+msgstr "منصة تقنية روحانية شاملة للتحول الرقمي"
+
+# Navigation and Menu Items
+msgid "nav_home"
+msgstr "الرئيسية"
+
+msgid "nav_dashboard"
+msgstr "لوحة التحكم"
+
+msgid "nav_analytics"
+msgstr "التحليلات"
+
+msgid "nav_security"
+msgstr "الأمان"
+
+msgid "nav_settings"
+msgstr "الإعدادات"
+
+msgid "nav_profile"
+msgstr "الملف الشخصي"
+
+msgid "nav_help"
+msgstr "المساعدة"
+
+msgid "nav_about"
+msgstr "حول"
+
+msgid "nav_logout"
+msgstr "تسجيل الخروج"
+
+# Authentication
+msgid "auth_login"
+msgstr "تسجيل الدخول"
+
+msgid "auth_register"
+msgstr "إنشاء حساب"
+
+msgid "auth_username"
+msgstr "اسم المستخدم"
+
+msgid "auth_email"
+msgstr "البريد الإلكتروني"
+
+msgid "auth_password"
+msgstr "كلمة المرور"
+
+msgid "auth_confirm_password"
+msgstr "تأكيد كلمة المرور"
+
+msgid "auth_forgot_password"
+msgstr "نسيت كلمة المرور؟"
+
+msgid "auth_remember_me"
+msgstr "تذكرني"
+
+msgid "auth_login_success"
+msgstr "تم تسجيل الدخول بنجاح! أهلاً بك في مدار النور الصفر"
+
+msgid "auth_login_failed"
+msgstr "فشل تسجيل الدخول. يرجى التحقق من بياناتك"
+
+msgid "auth_register_success"
+msgstr "تم إنشاء الحساب بنجاح! أهلاً بك في منصتنا المباركة"
+
+msgid "auth_logout_success"
+msgstr "تم تسجيل الخروج بنجاح. السلام عليكم"
+
+# Dashboard
+msgid "dashboard_welcome"
+msgstr "أهلاً بك في لوحة تحكم مدار النور الصفر"
+
+msgid "dashboard_overview"
+msgstr "نظرة عامة على النظام"
+
+msgid "dashboard_metrics"
+msgstr "المقاييس الرئيسية"
+
+msgid "dashboard_recent_activity"
+msgstr "النشاط الأخير"
+
+msgid "dashboard_quick_actions"
+msgstr "الإجراءات السريعة"
+
+msgid "dashboard_system_health"
+msgstr "صحة النظام"
+
+msgid "dashboard_performance"
+msgstr "الأداء"
+
+msgid "dashboard_security_status"
+msgstr "حالة الأمان"
+
+# Analytics
+msgid "analytics_title"
+msgstr "التحليلات والرؤى"
+
+msgid "analytics_user_engagement"
+msgstr "تفاعل المستخدمين"
+
+msgid "analytics_system_performance"
+msgstr "أداء النظام"
+
+msgid "analytics_security_metrics"
+msgstr "مقاييس الأمان"
+
+msgid "analytics_spiritual_insights"
+msgstr "الرؤى الروحانية"
+
+msgid "analytics_export_data"
+msgstr "تصدير البيانات"
+
+msgid "analytics_generate_report"
+msgstr "إنشاء تقرير"
+
+# Security
+msgid "security_title"
+msgstr "مركز الأمان"
+
+msgid "security_scan"
+msgstr "فحص الأمان"
+
+msgid "security_threats"
+msgstr "كشف التهديدات"
+
+msgid "security_encryption"
+msgstr "حالة التشفير"
+
+msgid "security_backup"
+msgstr "النسخ الاحتياطي والاستعادة"
+
+msgid "security_audit_log"
+msgstr "سجل المراجعة"
+
+msgid "security_change_password"
+msgstr "تغيير كلمة المرور"
+
+msgid "security_two_factor"
+msgstr "المصادقة الثنائية"
+
+msgid "security_scan_complete"
+msgstr "تم إكمال فحص الأمان بنجاح"
+
+msgid "security_no_threats"
+msgstr "لم يتم اكتشاف أي تهديدات أمنية"
+
+# Settings
+msgid "settings_title"
+msgstr "الإعدادات"
+
+msgid "settings_general"
+msgstr "الإعدادات العامة"
+
+msgid "settings_appearance"
+msgstr "المظهر"
+
+msgid "settings_language"
+msgstr "اللغة"
+
+msgid "settings_notifications"
+msgstr "الإشعارات"
+
+msgid "settings_privacy"
+msgstr "الخصوصية"
+
+msgid "settings_advanced"
+msgstr "الإعدادات المتقدمة"
+
+msgid "settings_save"
+msgstr "حفظ الإعدادات"
+
+msgid "settings_reset"
+msgstr "إعادة تعيين للافتراضي"
+
+msgid "settings_saved"
+msgstr "تم حفظ الإعدادات بنجاح"
+
+# Profile
+msgid "profile_title"
+msgstr "الملف الشخصي"
+
+msgid "profile_personal_info"
+msgstr "المعلومات الشخصية"
+
+msgid "profile_spiritual_preferences"
+msgstr "التفضيلات الروحانية"
+
+msgid "profile_cultural_settings"
+msgstr "الإعدادات الثقافية"
+
+msgid "profile_timezone"
+msgstr "المنطقة الزمنية"
+
+msgid "profile_calendar"
+msgstr "نوع التقويم"
+
+msgid "profile_prayer_times"
+msgstr "أوقات الصلاة"
+
+msgid "profile_update"
+msgstr "تحديث الملف الشخصي"
+
+msgid "profile_updated"
+msgstr "تم تحديث الملف الشخصي بنجاح"
+
+# Spiritual Elements
+msgid "spiritual_blessing"
+msgstr "البركة الإلهية"
+
+msgid "spiritual_prayer_time"
+msgstr "وقت الصلاة"
+
+msgid "spiritual_islamic_calendar"
+msgstr "التقويم الإسلامي"
+
+msgid "spiritual_hijri_date"
+msgstr "التاريخ الهجري"
+
+msgid "spiritual_lunar_calendar"
+msgstr "التقويم القمري"
+
+msgid "spiritual_meditation"
+msgstr "التأمل"
+
+msgid "spiritual_reflection"
+msgstr "التفكر الروحاني"
+
+msgid "spiritual_guidance"
+msgstr "الهداية الإلهية"
+
+# Prayer Times
+msgid "prayer_fajr"
+msgstr "الفجر"
+
+msgid "prayer_dhuhr"
+msgstr "الظهر"
+
+msgid "prayer_asr"
+msgstr "العصر"
+
+msgid "prayer_maghrib"
+msgstr "المغرب"
+
+msgid "prayer_isha"
+msgstr "العشاء"
+
+msgid "prayer_sunrise"
+msgstr "الشروق"
+
+msgid "prayer_sunset"
+msgstr "الغروب"
+
+# Islamic Months
+msgid "month_muharram"
+msgstr "محرم"
+
+msgid "month_safar"
+msgstr "صفر"
+
+msgid "month_rabi_awwal"
+msgstr "ربيع الأول"
+
+msgid "month_rabi_thani"
+msgstr "ربيع الثاني"
+
+msgid "month_jumada_awwal"
+msgstr "جمادى الأولى"
+
+msgid "month_jumada_thani"
+msgstr "جمادى الثانية"
+
+msgid "month_rajab"
+msgstr "رجب"
+
+msgid "month_shaban"
+msgstr "شعبان"
+
+msgid "month_ramadan"
+msgstr "رمضان"
+
+msgid "month_shawwal"
+msgstr "شوال"
+
+msgid "month_dhul_qadah"
+msgstr "ذو القعدة"
+
+msgid "month_dhul_hijjah"
+msgstr "ذو الحجة"
+
+# Common Actions
+msgid "action_save"
+msgstr "حفظ"
+
+msgid "action_cancel"
+msgstr "إلغاء"
+
+msgid "action_delete"
+msgstr "حذف"
+
+msgid "action_edit"
+msgstr "تعديل"
+
+msgid "action_view"
+msgstr "عرض"
+
+msgid "action_download"
+msgstr "تحميل"
+
+msgid "action_upload"
+msgstr "رفع"
+
+msgid "action_search"
+msgstr "بحث"
+
+msgid "action_filter"
+msgstr "تصفية"
+
+msgid "action_sort"
+msgstr "ترتيب"
+
+msgid "action_refresh"
+msgstr "تحديث"
+
+msgid "action_close"
+msgstr "إغلاق"
+
+msgid "action_minimize"
+msgstr "تصغير"
+
+msgid "action_maximize"
+msgstr "تكبير"
+
+# Status Messages
+msgid "status_loading"
+msgstr "جاري التحميل..."
+
+msgid "status_saving"
+msgstr "جاري الحفظ..."
+
+msgid "status_success"
+msgstr "نجح"
+
+msgid "status_error"
+msgstr "خطأ"
+
+msgid "status_warning"
+msgstr "تحذير"
+
+msgid "status_info"
+msgstr "معلومات"
+
+msgid "status_connecting"
+msgstr "جاري الاتصال..."
+
+msgid "status_connected"
+msgstr "متصل"
+
+msgid "status_disconnected"
+msgstr "منقطع"
+
+msgid "status_online"
+msgstr "متصل"
+
+msgid "status_offline"
+msgstr "غير متصل"
+
+# Error Messages
+msgid "error_network"
+msgstr "خطأ في الاتصال بالشبكة"
+
+msgid "error_server"
+msgstr "حدث خطأ في الخادم"
+
+msgid "error_validation"
+msgstr "خطأ في التحقق"
+
+msgid "error_permission"
+msgstr "تم رفض الإذن"
+
+msgid "error_not_found"
+msgstr "المورد غير موجود"
+
+msgid "error_timeout"
+msgstr "انتهت مهلة الطلب"
+
+msgid "error_unknown"
+msgstr "حدث خطأ غير معروف"
+
+# Success Messages
+msgid "success_saved"
+msgstr "تم حفظ البيانات بنجاح"
+
+msgid "success_deleted"
+msgstr "تم حذف العنصر بنجاح"
+
+msgid "success_updated"
+msgstr "تم تحديث المعلومات بنجاح"
+
+msgid "success_uploaded"
+msgstr "تم رفع الملف بنجاح"
+
+msgid "success_downloaded"
+msgstr "تم تحميل الملف بنجاح"
+
+# Confirmation Messages
+msgid "confirm_delete"
+msgstr "هل أنت متأكد من حذف هذا العنصر؟"
+
+msgid "confirm_logout"
+msgstr "هل أنت متأكد من تسجيل الخروج؟"
+
+msgid "confirm_reset"
+msgstr "هل أنت متأكد من إعادة تعيين الإعدادات؟"
+
+msgid "confirm_save"
+msgstr "هل تريد حفظ التغييرات؟"
+
+# Time and Date
+msgid "time_now"
+msgstr "الآن"
+
+msgid "time_today"
+msgstr "اليوم"
+
+msgid "time_yesterday"
+msgstr "أمس"
+
+msgid "time_tomorrow"
+msgstr "غداً"
+
+msgid "time_this_week"
+msgstr "هذا الأسبوع"
+
+msgid "time_last_week"
+msgstr "الأسبوع الماضي"
+
+msgid "time_this_month"
+msgstr "هذا الشهر"
+
+msgid "time_last_month"
+msgstr "الشهر الماضي"
+
+# Days of Week
+msgid "day_sunday"
+msgstr "الأحد"
+
+msgid "day_monday"
+msgstr "الاثنين"
+
+msgid "day_tuesday"
+msgstr "الثلاثاء"
+
+msgid "day_wednesday"
+msgstr "الأربعاء"
+
+msgid "day_thursday"
+msgstr "الخميس"
+
+msgid "day_friday"
+msgstr "الجمعة"
+
+msgid "day_saturday"
+msgstr "السبت"
+
+# Months
+msgid "month_january"
+msgstr "يناير"
+
+msgid "month_february"
+msgstr "فبراير"
+
+msgid "month_march"
+msgstr "مارس"
+
+msgid "month_april"
+msgstr "أبريل"
+
+msgid "month_may"
+msgstr "مايو"
+
+msgid "month_june"
+msgstr "يونيو"
+
+msgid "month_july"
+msgstr "يوليو"
+
+msgid "month_august"
+msgstr "أغسطس"
+
+msgid "month_september"
+msgstr "سبتمبر"
+
+msgid "month_october"
+msgstr "أكتوبر"
+
+msgid "month_november"
+msgstr "نوفمبر"
+
+msgid "month_december"
+msgstr "ديسمبر"
+
+# Numbers
+msgid "number_zero"
+msgstr "صفر"
+
+msgid "number_one"
+msgstr "واحد"
+
+msgid "number_two"
+msgstr "اثنان"
+
+msgid "number_three"
+msgstr "ثلاثة"
+
+msgid "number_four"
+msgstr "أربعة"
+
+msgid "number_five"
+msgstr "خمسة"
+
+msgid "number_six"
+msgstr "ستة"
+
+msgid "number_seven"
+msgstr "سبعة"
+
+msgid "number_eight"
+msgstr "ثمانية"
+
+msgid "number_nine"
+msgstr "تسعة"
+
+msgid "number_ten"
+msgstr "عشرة"
+
+# Spiritual Blessings
+msgid "blessing_bismillah"
+msgstr "بِسْمِ اللَّهِ"
+
+msgid "blessing_alhamdulillah"
+msgstr "الحمد لله"
+
+msgid "blessing_subhanallah"
+msgstr "سبحان الله"
+
+msgid "blessing_allahu_akbar"
+msgstr "الله أكبر"
+
+msgid "blessing_la_ilaha_illa_allah"
+msgstr "لا إله إلا الله"
+
+msgid "blessing_astaghfirullah"
+msgstr "أستغفر الله"
+
+msgid "blessing_inshallah"
+msgstr "إن شاء الله"
+
+msgid "blessing_mashallah"
+msgstr "ما شاء الله"
+
+msgid "blessing_barakallahu_feek"
+msgstr "بارك الله فيك"
+
+msgid "blessing_assalamu_alaikum"
+msgstr "السلام عليكم"
+
+msgid "blessing_wa_alaikum_assalam"
+msgstr "وعليكم السلام"
+
+# Cultural Elements
+msgid "culture_respect"
+msgstr "الاحترام"
+
+msgid "culture_wisdom"
+msgstr "الحكمة"
+
+msgid "culture_compassion"
+msgstr "الرحمة"
+
+msgid "culture_unity"
+msgstr "الوحدة"
+
+msgid "culture_peace"
+msgstr "السلام"
+
+msgid "culture_harmony"
+msgstr "الانسجام"
+
+msgid "culture_gratitude"
+msgstr "الامتنان"
+
+msgid "culture_patience"
+msgstr "الصبر"
+
+msgid "culture_kindness"
+msgstr "اللطف"
+
+msgid "culture_humility"
+msgstr "التواضع"

@@ -1,0 +1,77 @@
+# 🙏 Bismillahirrahmanirrahim - ZeroLight Orbit Performance Requirements
+# Dependencies for 6993 Spiritual Static Bots Performance Optimization
+# Ultra-Lightweight • Resource Management • Spiritual Enhancement
+
+# Core Performance Libraries
+psutil>=5.9.0              # System and process utilities
+numpy>=1.24.0              # Numerical computing for performance metrics
+asyncio>=3.4.3             # Asynchronous programming support
+
+# Resource Management
+weakref>=1.0.1             # Weak references for memory optimization
+gc>=1.0                    # Garbage collection utilities
+threading>=3.8.0           # Thread management
+multiprocessing>=3.8.0     # Process management
+
+# Data Structures & Collections
+collections>=3.8.0         # Specialized container datatypes
+heapq>=3.8.0              # Heap queue algorithm
+deque>=3.8.0              # Double-ended queue
+defaultdict>=3.8.0        # Dictionary with default values
+
+# Monitoring & Logging
+logging>=3.8.0            # Logging facility
+time>=3.8.0               # Time-related functions
+statistics>=3.8.0         # Statistical functions
+
+# Concurrency & Parallelism
+concurrent.futures>=3.8.0 # High-level interface for asynchronously executing callables
+ThreadPoolExecutor>=3.8.0 # Thread pool executor
+ProcessPoolExecutor>=3.8.0 # Process pool executor
+
+# Data Handling
+json>=2.0.9               # JSON encoder and decoder
+dataclasses>=3.7.0        # Data classes
+enum>=1.1.10              # Enumeration support
+typing>=3.8.0             # Type hints
+
+# System Integration
+os>=3.8.0                 # Operating system interface
+sys>=3.8.0                # System-specific parameters and functions
+
+# Optional Performance Enhancements
+# Uncomment if needed for advanced optimization
+
+# cProfile>=3.8.0          # Profiling support
+# memory_profiler>=0.60.0  # Memory usage profiler
+# line_profiler>=4.0.0     # Line-by-line profiler
+# py-spy>=0.3.14           # Sampling profiler
+# pympler>=0.9             # Memory profiler
+
+# Advanced Monitoring (Optional)
+# prometheus_client>=0.16.0 # Prometheus metrics
+# grafana-api>=1.0.3       # Grafana integration
+# influxdb-client>=1.36.0  # InfluxDB time series database
+
+# Spiritual Enhancement Libraries (Symbolic)
+# These represent the spiritual aspects of our optimization
+# 🙏 Bismillah - In the name of Allah
+# 📿 Subhanallah - Glory be to Allah  
+# 🌟 Alhamdulillah - Praise be to Allah
+# 💫 Allahu Akbar - Allah is the Greatest
+# ✨ La hawla wa la quwwata illa billah - There is no power except with Allah
+
+# Installation Instructions:
+# pip install -r requirements-performance.txt
+
+# For development environment:
+# pip install -r requirements-performance.txt --upgrade
+
+# For production environment (minimal):
+# pip install psutil numpy asyncio
+
+# Spiritual Blessing for Installation:
+# 🙏 بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+# May Allah bless this installation and grant optimal performance
+# to all 6993 spiritual static bots in the ZeroLight Orbit system.
+# Ameen.

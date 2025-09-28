@@ -1,0 +1,295 @@
+# Spiritual Bot System - Python Dependencies
+# Bismillahirrahmanirrahim
+
+# Core Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+Flask-SQLAlchemy==3.0.5
+requests==2.31.0
+urllib3==2.0.7
+
+# Database
+sqlite3
+sqlalchemy==2.0.23
+psycopg2-binary==2.9.9  # For PostgreSQL/Supabase
+
+# Web Scraping & Discovery
+beautifulsoup4==4.12.2
+selenium==4.15.2
+scrapy==2.11.0
+lxml==4.9.3
+html5lib==1.1
+
+# HTTP & API
+httpx==0.25.2
+aiohttp==3.9.1
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# Data Processing
+pandas==2.1.4
+numpy==1.25.2
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Async & Threading
+asyncio
+threading
+concurrent.futures
+multiprocessing
+
+# Monitoring & Logging
+loguru==0.7.2
+rich==13.7.0
+colorama==0.4.6
+tqdm==4.66.1
+
+# Configuration & Environment
+python-dotenv==1.0.0
+pyyaml==6.0.1
+configparser==6.0.0
+toml==0.10.2
+
+# Security & Encryption
+cryptography==41.0.8
+bcrypt==4.1.2
+passlib==1.7.4
+pyjwt==2.8.0
+
+# GitHub Integration
+PyGithub==2.1.1
+gitpython==3.1.40
+
+# Supabase Integration
+supabase==2.0.2
+postgrest==0.13.0
+
+# Web Dashboard & UI
+jinja2==3.1.2
+markupsafe==2.1.3
+werkzeug==2.3.7
+
+# Time & Scheduling
+schedule==1.2.0
+croniter==2.0.1
+apscheduler==3.10.4
+
+# Islamic/Spiritual Features
+hijri-converter==2.3.1
+prayer-times==0.3.0
+
+# Data Validation
+pydantic==2.5.2
+marshmallow==3.20.2
+cerberus==1.3.5
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+mock==5.1.0
+
+# Development Tools
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+mypy==1.7.1
+
+# File Processing
+openpyxl==3.1.2
+xlsxwriter==3.1.9
+python-docx==1.1.0
+
+# Network & DNS
+dnspython==2.4.2
+socket
+ipaddress
+
+# System & OS
+psutil==5.9.6
+pathlib
+os
+sys
+platform
+
+# JSON & Data Formats
+orjson==3.9.10
+simplejson==3.19.2
+
+# Rate Limiting
+ratelimit==2.2.1
+slowapi==0.1.9
+
+# Caching
+redis==5.0.1
+diskcache==5.6.3
+
+# Email & Notifications
+smtplib
+email
+pushbullet.py==0.12.0
+
+# Image Processing (for SVG generation)
+pillow==10.1.0
+cairosvg==2.7.1
+
+# CLI & Terminal
+click==8.1.7
+typer==0.9.0
+argparse
+
+# Utilities
+uuid
+hashlib
+base64
+json
+pickle
+csv
+xml.etree.ElementTree
+
+# Web Server
+gunicorn==21.2.0
+waitress==2.1.2
+
+# Monitoring & Health Checks
+healthcheck==1.3.3
+prometheus-client==0.19.0
+
+# Documentation
+sphinx==7.2.6
+mkdocs==1.5.3
+
+# Version Control
+dulwich==0.21.7
+
+# Machine Learning (Optional)
+scikit-learn==1.3.2
+tensorflow==2.15.0  # Optional for advanced features
+
+# Natural Language Processing (Optional)
+nltk==3.8.1
+textblob==0.17.1
+
+# API Documentation
+flask-restx==1.3.0
+flasgger==0.9.7.1
+
+# Background Tasks
+celery==5.3.4
+redis==5.0.1  # For Celery broker
+
+# File Watching
+watchdog==3.0.0
+
+# HTTP Client
+httplib2==0.22.0
+
+# XML Processing
+xmltodict==0.13.0
+
+# Timezone
+pytz==2023.3
+
+# Progress Bars
+alive-progress==3.1.5
+
+# System Information
+distro==1.8.0
+
+# Memory Profiling
+memory-profiler==0.61.0
+
+# Process Management
+supervisor==4.2.5
+
+# SSL/TLS
+pyopenssl==23.3.0
+
+# Compression
+gzip
+zipfile
+tarfile
+
+# Regular Expressions
+re
+
+# Math & Statistics
+statistics
+math
+random
+
+# Datetime
+datetime
+time
+calendar
+
+# String Processing
+string
+textwrap
+
+# File Operations
+shutil
+glob
+fnmatch
+
+# URL Processing
+urllib.parse
+
+# Base64 Encoding
+base64
+
+# Hash Functions
+hashlib
+hmac
+
+# Subprocess
+subprocess
+
+# Signal Handling
+signal
+
+# Garbage Collection
+gc
+
+# Warnings
+warnings
+
+# Traceback
+traceback
+
+# Inspect
+inspect
+
+# Collections
+collections
+itertools
+functools
+operator
+
+# Copy
+copy
+deepcopy
+
+# Weak References
+weakref
+
+# Context Management
+contextlib
+
+# Abstract Base Classes
+abc
+
+# Enum
+enum
+
+# Decimal
+decimal
+
+# Fractions
+fractions
+
+# Secrets (Cryptographically Strong Random Numbers)
+secrets
+
+# Spiritual Bot System Specific
+# Custom modules will be added as needed

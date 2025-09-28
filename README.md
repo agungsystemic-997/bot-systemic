@@ -8,6 +8,8 @@
 
 Spiritual Bot System adalah sistem otomasi yang diberkahi untuk mengelola dan memonitor berbagai aspek digital dengan pendekatan spiritual Islam. Sistem ini menggabungkan teknologi modern dengan nilai-nilai spiritual untuk menciptakan solusi yang holistik dan bermakna.
 
+Sistem listener dan webhook otomatis untuk pemantauan transaksi digital. Dirancang dengan struktur modular, endpoint terverifikasi, dan pelaporan SMTP. Mendukung integrasi Telegram, PayPal, dan refleksi harian. Dibangun untuk efisiensi, keamanan, dan keberlanjutan sistem.
+
 ## ✨ Fitur Utama
 
 ### 🌐 Web Discovery & Monitoring
